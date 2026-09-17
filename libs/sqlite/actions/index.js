@@ -9,6 +9,7 @@ import putJson from './putJson';
 import removeItem from './removeItem';
 import updateItem from './updateItem';
 import listTables from './listTables';
+import clearAllTables from './clearAllTables.js';
 import { report } from '../utility';
 
 export { default as addItem } from './addItem';
@@ -39,6 +40,7 @@ function setActions(db) {
     putJson: (table, selector, column, data) => putJson(db, table, selector, column, data),
 
     listTables: () => listTables(db),
+    clearAllTables: () => clearAllTables(db),
 
     reportTableList: () => report('Tables', listTables(db)),
     reportAllItems: (table, fields = null) => report(`Table '${table}':`, getAllItems(db, table, fields)),

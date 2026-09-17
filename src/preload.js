@@ -13,6 +13,7 @@ contextBridge.exposeInMainWorld('ipc', {
   db_putJson: (...args) => ipcRenderer.invoke('db_putJson', ...args),
   db_removeItem: (...args) => ipcRenderer.invoke('db_removeItem', ...args),
   db_updateItem: (...args) => ipcRenderer.invoke('db_updateItem', ...args),
+  db_clearAllTables: (...args) => ipcRenderer.invoke('db_clearAllTables', ...args),
 });
 
 console.log('[preload.js] IPC ready');
