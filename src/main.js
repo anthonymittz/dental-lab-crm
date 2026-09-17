@@ -1,3 +1,4 @@
+const { default: db } = require('@lib/sqlite/index.js');
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
 
@@ -21,6 +22,8 @@ const createWindow = () => {
 };
 
 Menu.setApplicationMenu(null);
+
+// db.createTable('users');
 
 app.whenReady().then(() => {
   createWindow();
