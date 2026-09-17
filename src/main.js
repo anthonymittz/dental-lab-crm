@@ -27,6 +27,10 @@ Menu.setApplicationMenu(null);
 
 app.whenReady().then(() => {
   ipcMain.handle('ping', () => 'pong');
+  const actions = Object.keys(db);
+  actions.forEach(action => ipcMain.handle(`db_${action}`, async (event, ...args) => await db[action](...args)));
+  console.log('[IPC] Ready');
+  
   createWindow();
 
   app.on('activate', () => {
@@ -41,4 +45,3 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
-

@@ -8,6 +8,7 @@ function createTable(db, name, schema) {
     `CREATE TABLE IF NOT EXISTS ${name} (${schema});`);
 
   statement.run();
+  console.log('[DB] createTable: created', name, schema);
 }
 
 export default createTable;

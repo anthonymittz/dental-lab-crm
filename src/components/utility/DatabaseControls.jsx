@@ -2,15 +2,16 @@ import { merge } from "@lib/merge";
 import { Database } from "lucide-react";
 import { useEffect } from "react";
 
+async function dummyDBCall() {
+  await window.ipc.db_createTable('users', 'id TEXT PRIMARY KEY, name TEXT NOT NULL UNIQUE');
+  console.log('Table created');
+  console.log(await window.ipc.db_listTables());
+}
+
 function DatabaseControls({ className = appearance }) {
   const a = merge(appearance, className);
-
   useEffect(() => {
-    const ping = async () => {
-      const res = await window.db.ping();
-      console.log(res);
-    }
-    ping();
+    dummyDBCall();
   }, []);
 
   return (

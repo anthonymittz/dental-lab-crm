@@ -38,6 +38,8 @@ function setActions(db) {
     getJson: (table, selector, column) => getJson(db, table, selector, column),
     putJson: (table, selector, column, data) => putJson(db, table, selector, column, data),
 
+    listTables: () => listTables(db),
+
     reportTableList: () => report('Tables', listTables(db)),
     reportAllItems: (table, fields = null) => report(`Table '${table}':`, getAllItems(db, table, fields)),
   };
