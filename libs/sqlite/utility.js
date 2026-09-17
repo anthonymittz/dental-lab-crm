@@ -6,6 +6,7 @@ import { v4 } from "uuid";
 export function createDB(filename) {
   const filepath = path.resolve(filename);
   const db = new Database(filepath);
+  // db.pragma('journal_mode = WAL');
   report('Created a database:', filename);
   return db;
 }
