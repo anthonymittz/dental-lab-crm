@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
 
 if (require('electron-squirrel-startup')) {
@@ -19,6 +19,8 @@ const createWindow = () => {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   mainWindow.webContents.openDevTools();
 };
+
+Menu.setApplicationMenu(null);
 
 app.whenReady().then(() => {
   createWindow();
