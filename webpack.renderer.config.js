@@ -28,6 +28,11 @@ module.exports = (env, argv) => {
   return {
     mode: isProduction ? 'production' : 'development',
     devtool: 'source-map',
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      }
+    },
     module: {
       rules,
     },
