@@ -8,7 +8,26 @@
     ".vscode": true,
     "**/*.code-workspace": true,
     "**/node_modules/": true,
-    "**/package-lock.json": true
+    "**/package-lock.json": true,
+    "babel.config.js": true,
+    "forge.config.js": true,
+    "jsconfig.json": true,
+    "package.json": true,
+    "postcss.config.js": true,
+    "webpack.main.config.js": true,
+    "webpack.renderer.config.js": true,
+    "webpack.rules.js": true,
+    ".gitignore": true
   },
-  "hide-files.files": []
+  "hide-files.files": [
+    "babel.config.js",
+    "forge.config.js",
+    "jsconfig.json",
+    "package.json",
+    "postcss.config.js",
+    "webpack.main.config.js",
+    "webpack.renderer.config.js",
+    "webpack.rules.js",
+    ".gitignore"
+  ]
 }
