@@ -10,10 +10,12 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
+      // @ts-ignore
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
 
+  // @ts-ignore
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   mainWindow.webContents.openDevTools();
 };

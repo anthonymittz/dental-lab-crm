@@ -1,3 +1,4 @@
+// @ts-nocheck
 const rules = require('./webpack.rules');
 const path = require('path');
 
@@ -31,6 +32,7 @@ module.exports = (env, argv) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        '@lib': path.resolve(__dirname, 'libs'),
       }
     },
     module: {
