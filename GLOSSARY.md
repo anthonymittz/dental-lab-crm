@@ -1,4 +1,4 @@
 # Glossary
 
-- CRM: 
+- **CRM**: 
   centralized resource management
