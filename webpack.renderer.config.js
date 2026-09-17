@@ -23,9 +23,13 @@ rules.push({
   }
 });
 
-module.exports = {
-  devtool: 'source-map',
-  module: {
-    rules,
-  },
+module.exports = (env, argv) => {
+  const isProduction  = argv.mode === 'production';
+  return {
+    mode: isProduction ? 'production' : 'development',
+    devtool: 'source-map',
+    module: {
+      rules,
+    },
+  }
 };
