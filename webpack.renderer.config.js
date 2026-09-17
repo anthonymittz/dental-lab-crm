@@ -1,8 +1,14 @@
 const rules = require('./webpack.rules');
+const path = require('path');
 
 rules.push({
   test: /\.css$/,
-  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+  include: path.resolve(__dirname, 'src'),
+  use: [
+    'style-loader',
+    'css-loader',
+    'postcss-loader'
+  ],
 });
 
 rules.push({
@@ -11,7 +17,8 @@ rules.push({
     loader: 'babel-loader',
     options: {
       exclude: /node_modules/,
-      presets: ['@babel/preset-react']
+      presets: ['@babel/preset-react'],
+      compact: false
     }
   }
 });

@@ -33,12 +33,16 @@
     "@electron-forge/plugin-fuses": "^7.11.2",
     "@electron-forge/plugin-webpack": "^7.11.2",
     "@electron/fuses": "^1.8.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^10.1.1",
     "css-loader": "^6.11.0",
     "electron": "44.4.1",
     "node-loader": "^2.1.0",
-    "style-loader": "^3.3.4"
+    "postcss": "^8.5.28",
+    "postcss-loader": "^8.2.1",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^4.3.3"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
