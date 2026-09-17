@@ -12,6 +12,7 @@ function getJson(db, table, selector, column) {
   const statement = db.prepare(
     `SELECT ${column} FROM ${table} WHERE ${key} = ?;`);
 
+  // @ts-ignore
   const result = JSON.parse(statement.get(value)[column]);
   return result;
   // console.log('[getJson] Result', result)

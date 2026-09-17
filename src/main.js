@@ -1,5 +1,5 @@
 const { default: db } = require('@lib/sqlite/index.js');
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('node:path');
 
 if (require('electron-squirrel-startup')) {
@@ -26,6 +26,7 @@ Menu.setApplicationMenu(null);
 // db.createTable('users');
 
 app.whenReady().then(() => {
+  ipcMain.handle('ping', () => 'pong');
   createWindow();
 
   app.on('activate', () => {

@@ -10,6 +10,7 @@
     "package": "cross-env NODE_ENV=production electron-forge package",
     "make": "cross-env NODE_ENV=production electron-forge make",
     "publish": "cross-env NODE_ENV=production electron-forge publish",
+    "rebuild": "npx electron-rebuild -f -w better-sqlite3,bcrypt",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
@@ -33,6 +34,7 @@
     "@electron-forge/plugin-fuses": "^7.11.2",
     "@electron-forge/plugin-webpack": "^7.11.2",
     "@electron/fuses": "^1.8.0",
+    "@electron/rebuild": "^4.2.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^10.1.1",
@@ -55,6 +57,7 @@
     "motion": "^13.4.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-router": "^8.4.0"
+    "react-router": "^8.4.0",
+    "uuid": "^14.0.2"
   }
 }
