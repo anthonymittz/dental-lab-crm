@@ -4,6 +4,8 @@ declare global {
   interface Window {
     ipc: {
       ping: () => Promise<string>;
+      swap: () => Promise<string>;
+      db: (filename) => Promise<any>;
       db_addItem:        (...args) => Promise<any>;
       db_clearTable:     (...args) => Promise<any>;
       db_createTable:    (...args) => Promise<any>;

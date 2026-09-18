@@ -24,6 +24,9 @@ export { default as putJson } from './putJson';
 export { default as removeItem } from './removeItem';
 export { default as updateItem } from './updateItem';
 
+/**
+ * @param {import('better-sqlite3').Database} db 
+ */
 function setActions(db) {
   return {
     createTable: (name, schema) => createTable(db, name, schema),
@@ -44,7 +47,11 @@ function setActions(db) {
 
     reportTableList: () => report('Tables', listTables(db)),
     reportAllItems: (table, fields = null) => report(`Table '${table}':`, getAllItems(db, table, fields)),
+
+    close: () => db.close(),
   };
 }
+
+/** @typedef {ReturnType<setActions>} AdapterDB */
 
 export default setActions;

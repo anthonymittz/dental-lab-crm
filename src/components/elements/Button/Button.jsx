@@ -3,12 +3,13 @@ import { merge } from "@lib/merge";
 function Button({
   className = appearance,
   children = "Button",
+  onClick = () => {},
   ...props
 }) {
   const a = merge(appearance, className);
 
   return (
-    <button className={a.container} {...props}>
+    <button className={a.container} onClick={onClick} {...props}>
       { children }
     </button>
   );

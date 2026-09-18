@@ -2,6 +2,8 @@ const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('ipc', {
   ping: () => ipcRenderer.invoke('ping'),
+  swap: () => ipcRenderer.invoke('swap'),
+  db: (filename) => ipcRenderer.invoke('db', filename),
   db_addItem: (...args) => ipcRenderer.invoke('db_addItem', ...args),
   db_clearTable: (...args) => ipcRenderer.invoke('db_clearTable', ...args),
   db_createTable: (...args) => ipcRenderer.invoke('db_createTable', ...args),
