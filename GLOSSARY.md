@@ -1,3 +1,5 @@
+[Go back to README](./README.md)
+
 # Glossary
 
 - **CRM**:  

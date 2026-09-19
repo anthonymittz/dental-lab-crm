@@ -1,4 +1,6 @@
-# Style guide
+[Go back to README](./README.md)
+
+# Development notes
 
 ## Project structure
 
@@ -50,7 +52,7 @@ Notes that capture observations, reflect the thinking process, diagnose and deli
 
 
 | title | description (symptoms) | problem (diagosis) | approach |
-|-------|------------------------|--------------------|----------|
+|:------|:-----------------------|:-------------------|:---------|
 
 ### UC: use-cases
 
@@ -58,7 +60,7 @@ Notes that capture observations, reflect the thinking process, diagnose and deli
 - then possible implementations (the "how")
 
 | problem                  | approach       | notes |
-|--------------------------|----------------|-------|
+|:-------------------------|:---------------|:------|
 | user intention/objective | implementation | ...   |
   
 
@@ -75,7 +77,7 @@ A shared table for refactoring of your understanding of the problem.
   - **colors**: a separate layer for subjective value.
 
   | problem / decision | current approach | another approach | notes |
-  | -------------------|------------------|------------------|-------|
+  |:-------------------|:-----------------|:-----------------|:------|
   | criterion          | aspect           | aspect           | ...   |
   
   
