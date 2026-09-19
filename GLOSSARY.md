@@ -1,4 +1,10 @@
 # Glossary
 
-- **CRM**: 
-  centralized resource management
+- **CRM**:  
+  Centralized resource management.
+
+## Electron
+
+- **IPC**:  
+  Inter-process communicaiton.
+

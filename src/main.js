@@ -1,7 +1,5 @@
-const { initIpc } = require('@/ipc.js');
-const { DB } = require('@lib/sqlite/index.js');
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
-const path = require('node:path');
+const { initIpc } = require('@/ipc.js');
 
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -24,29 +22,8 @@ const createWindow = () => {
 
 Menu.setApplicationMenu(null);
 
-// db.createTable('users');
-// let responder;
-// function foo() { responder = bar; return "foo" }
-// function bar() { responder = foo; return "bar" }
-// /** @type {import('@lib/sqlite/actions/index.js').AdapterDB|DB|null} */
-// let db = null;
-
 app.whenReady().then(() => {
   initIpc(ipcMain);
-  // ipcMain.handle('ping', () => 'pong');
-  // responder = foo;
-  // ipcMain.handle('swap', () => responder());
-  // const actions = Object.keys(db);
-  // actions.forEach(action => ipcMain.handle(`db_${action}`, async (event, ...args) => await db[action](...args)));
-  // console.log('[IPC] Ready');
-  // db = new DB("storage.db");
-  // ipcMain.handle('db', async (event, location) => {
-  //   db?.close();
-  //   db = null;
-  //   db = new DB(location);
-  // });
-  // ipcMain.handle('db_listTables', () => db?.listTables());
-  
   createWindow();
 
   app.on('activate', () => {
