@@ -1,12 +1,13 @@
 import Button from "@/components/elements/Button/Button.jsx";
+import ipc from "@/ipc.js";
 
 function App() {
+  const ping = () => ipc.ping({foo: 'bar'}).then(res => console.log(res));
+
   return (
     <div>
       <h1>App</h1>
-      <Button onClick={() => window.ipc.swap().then(res => console.log(res))}>Swap</Button>
-      <Button onClick={() => window.ipc.db('storage2.db').then(res => console.log('New DB'))}>DB</Button>
-      <Button onClick={() => window.ipc.db_listTables().then(res => console.log('Tables', res))}>Tables</Button>
+      <Button onClick={ping}>Ping</Button>
     </div>
   );
 }
