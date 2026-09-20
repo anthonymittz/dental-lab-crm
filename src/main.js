@@ -23,7 +23,14 @@ const createWindow = () => {
 Menu.setApplicationMenu(null);
 
 app.whenReady().then(() => {
-  initIpc(ipcMain);
+  initIpc(ipcMain, 
+    {
+      action: () => console.log('[IPC] Some action!'),
+    }, 
+    {
+      ping: data => Promise.resolve("Pinging back: " + JSON.stringify(data))
+    });
+    
   createWindow();
 
   app.on('activate', () => {
