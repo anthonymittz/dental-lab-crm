@@ -20,9 +20,21 @@ rules.push({
       exclude: /node_modules/,
       presets: ['@babel/preset-react'],
       compact: false
-    }
-  }
+    },
+  },
 });
+
+rules.push({
+  test: /\.(png|jpe?g|gif|webp)$/i,
+  type: 'asset/resource',
+  // generator: {filename: 'static/images/[hash][ext][query]'},
+});
+
+rules.push({
+  test: /\.svg$/i,
+  issuer: /\.[jt]sx?$/,
+  use: ['@svgr/webpack']
+})
 
 module.exports = (env, argv) => {
   const isProduction  = argv.mode === 'production';

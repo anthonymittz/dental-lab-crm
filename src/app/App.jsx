@@ -1,12 +1,15 @@
-import Button from "@/components/elements/Button/Button.jsx";
+import Image from "@/app/Image.jsx";
 import ipc from "@/ipc.js";
+import Brand from "@/assets/brand.svg";
 
 function App() {
   const ping = () => ipc.ping({foo: 'bar'}).then(res => console.log(res));
 
   return (
     <div>
-      <h1>App</h1>
+      <Brand />
+      <p>Лаборатория</p>
+      <h1>Современные Эстетические Решения</h1>
     </div>
   );
 }

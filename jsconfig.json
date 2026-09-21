@@ -10,5 +10,6 @@
       "@lib/*": ["./libs/*"]
     }
   },
+  "include": ["src/**/*", "libs/**/*", "src/index.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

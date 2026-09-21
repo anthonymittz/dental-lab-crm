@@ -35,6 +35,7 @@
     "@electron-forge/plugin-webpack": "^7.11.2",
     "@electron/fuses": "^1.8.0",
     "@electron/rebuild": "^4.2.0",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^10.1.1",
