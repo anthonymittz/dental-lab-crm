@@ -1,16 +1,27 @@
-import Image from "@/app/Image.jsx";
-import ipc from "@/ipc.js";
-import Brand from "@/assets/brand.svg";
+import { StrictMode } from 'react';
+import { HashRouter, Route, Routes } from 'react-router';
+import Layout from '@/app/Layout.jsx';
+import * as Pages from "./pages";
 
 function App() {
-  const ping = () => ipc.ping({foo: 'bar'}).then(res => console.log(res));
-
   return (
-    <div>
-      <Brand />
-      <p>Лаборатория</p>
-      <h1>Современные Эстетические Решения</h1>
-    </div>
+    <StrictMode>
+    <HashRouter>
+    <Routes>
+      <Route path="/" element={<Pages.Business />} />
+      <Route path="/" element={<Layout />}>
+        <Route path="/dashboard" element={<Pages.Dashboard />} />
+        <Route path="/orders" element={<Pages.Orders />} />
+        <Route path="/schedule" element={<Pages.Schedule />} />
+        <Route path="/business" element={<Pages.Business />} />
+        <Route path="/finances" element={<Pages.Finances />} />
+        <Route path="/inventory" element={<Pages.Inventory />} />
+        <Route path="/deliveries" element={<Pages.Deliveries />} />
+        <Route path="/unimplemented" element={<Pages.Fallback />} />
+      </Route>
+    </Routes>
+    </HashRouter>
+    </StrictMode>
   );
 }
 

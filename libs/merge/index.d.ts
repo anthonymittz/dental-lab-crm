@@ -9,5 +9,5 @@ type ClassValue = import("clsx").ClassValue;
 
 type ClassObject = {[key: string]: ClassValue};
 
-export function is(classes: ClassValue[]) : string;
+export function is(...classes: ClassValue[]) : string;
 export function merge<T extends readonly object[]>(...objects: T): Simplify<MergeTuple<T>>;
