@@ -7,3 +7,5 @@ export { default as Inventory }  from "./Inventory.jsx";
 export { default as Orders }     from "./Orders.jsx";
 export { default as Schedule }   from "./Schedule.jsx";
 export { default as Welcome }    from "./Welcome.jsx";
+export { default as Settings }   from "./Settings.jsx";
+export { default as Account }    from "./Account.jsx";

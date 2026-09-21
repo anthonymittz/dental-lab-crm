@@ -1,6 +1,7 @@
 /**
  * @typedef {Object} VoidHandlers
  * @prop {(...args: any[]) => void} action
+ * @prop {(cb: Function) => void} reload
  */
 
 /**
@@ -27,7 +28,8 @@
  */
 const ON = {
   ACTION: 'action',
-  PING: 'ping'
+  PING: 'ping',
+  RELOAD: 'reload',
 };
 
 /**
@@ -54,6 +56,7 @@ export function bridgeIpc(contextBridge, ipcRenderer) {
   const api = {
     action: () => ipcRenderer.send(ON.ACTION),
     ping: async data => await ipcRenderer.invoke(ON.PING, data),
+    reload: cb => ipcRenderer.on(ON.RELOAD, () => cb())
   };
   contextBridge.exposeInMainWorld('ipc', api);
 }
@@ -65,6 +68,7 @@ export function bridgeIpc(contextBridge, ipcRenderer) {
 const ipc = {
   action: () => window.ipc.action(),
   ping: async data => await window.ipc.ping(data),
+  reload: cb => window.ipc.reload(cb)
 };
 
 export default ipc;

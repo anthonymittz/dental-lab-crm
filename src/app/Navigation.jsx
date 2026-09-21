@@ -1,34 +1,39 @@
-import Menu from "@/app/Menu.jsx";
+import Menu from "@/app/Menu/Menu.jsx";
 import NavLink from "@/app/NavLink.jsx";
 import { merge } from "@lib/merge";
 import BrandSmall from "@/assets/brand-sm.svg";
-import { LogOut } from "lucide-react";
+import { LogOut, Settings } from "lucide-react";
 
 function Navigation({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
     <nav className={a.container}>
-      <AppCard />
-      <Menu className={{ container: 'grow' }} />
       <AccountCard />
+      <Menu className={{ container: 'grow' }} />
+      <AppCard />
     </nav>
   );
 }
 function AppCard() {
   return (
     <div className="flex items-center card">
-      <NavLink to='/'>OrdoDens</NavLink>
+      <NavLink to='/settings' className={{ container: "flex gap-2"}}>
+        <Settings />
+        <span>Settings</span>
+      </NavLink>
     </div>
   );
 }
 
 function AccountCard() {
   return (
-    <div className="flex gap-4 justify-between items-center card bg-primary-50">
-      <BrandSmall className="h-10" />
-      <p className="grow text-lg tracking-wider">СЭР</p>
-      <NavLink to="/"><LogOut className="opacity-30" height={18} /></NavLink>
+    <div className="flex gap-3 justify-between items-center card bg-primary-50">
+      <NavLink to="/dashboard" className={{ container: "flex gap-3 items-center" }}>
+        <BrandSmall className="h-10" />
+        <span className="grow text-lg tracking-wider">СЭР</span>
+      </NavLink>
+      <NavLink to="/"><LogOut className="opacity-20" height={18} /></NavLink>
     </div>
   );
 }

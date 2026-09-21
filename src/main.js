@@ -1,12 +1,14 @@
-const { app, BrowserWindow, Menu, ipcMain } = require('electron');
+const { app, ipcMain, BrowserWindow, Menu, MenuItem } = require('electron');
 const { initIpc } = require('@/ipc.js');
 
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
+/** @type {BrowserWindow|null} */
+let mainWindow = null;
 
 const createWindow = () => {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -20,16 +22,20 @@ const createWindow = () => {
   mainWindow.webContents.openDevTools();
 };
 
-Menu.setApplicationMenu(null);
+const menu = new Menu();
+const submenu = Menu.buildFromTemplate([{
+  label: 'Reload app',
+  click: () => { mainWindow?.webContents.send('reload'); console.log('Reload...')},
+  accelerator: 'CommandOrControl+Shift+R'
+}]);
+menu.append(new MenuItem({ label: 'App', submenu }));
+Menu.setApplicationMenu(menu);
 
 app.whenReady().then(() => {
   initIpc(ipcMain, 
-    {
-      action: () => console.log('[IPC] Some action!'),
-    }, 
-    {
-      ping: data => Promise.resolve("Pinging back: " + JSON.stringify(data))
-    });
+    { action: () => console.log('[IPC] Some action!') }, 
+    { ping: data => Promise.resolve("Pinging back: " + JSON.stringify(data)) }
+  );
     
   createWindow();
 
