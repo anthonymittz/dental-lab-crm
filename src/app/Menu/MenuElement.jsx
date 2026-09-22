@@ -3,34 +3,34 @@ import { is, merge } from "@lib/merge";
 import { DynamicIcon } from "lucide-react/dynamic.js";
 
 /** @argument { MenuEntries } menu */
-export function useElements(menu, level = 1) {
+export function useElements(menu, nested = false) {
   return Object.entries(menu).map(([id, entry]) => 
-    <MenuElement key={id} data={entry} level={level} />);
+    <MenuElement key={id} data={entry} nested={nested} />);
 }
 
 /**
  * @param {{ 
  *   data: MenuEntry
- *   level?: number
+ *   nested?: boolean
  *   className?: typeof appearance
  * }} props 
  */
 function MenuElement({
   data,
-  level = 1,
+  nested = false,
   className = appearance
 }) {
   const a = merge(appearance, className);
   const Link = ({ children }) =>
     data.link ? <NavLink to={data.link}>{children}</NavLink> : <>{children}</>;
 
-  const nested = data.items && useElements(data.items, level + 1);
+  const list = data.items && useElements(data.items, true);
   
   const card = (
     <Link>
     <div className={a.card}>
-      <DynamicIcon name={data.icon || 'dot'} className={is(level > 1 && 'text-gray-600')} />
-        <span className={is(level === 1 && 'font-semibold', level > 1 && 'text-gray-600')}>{data.name}</span>
+      <DynamicIcon name={data.icon || 'dot'} />
+      <span>{ nested ? data.name : '' }</span>
     </div>
     </Link>
   );
@@ -38,13 +38,13 @@ function MenuElement({
   return (
     <div className={a.container}>
       { card }
-      { nested && <div className={is(a.list, `pl-3`)}>{nested}</div> }
+      {nested && <div className={is(a.list, `pl-3`)}>{list}</div> }
     </div>
   );
 }
 
 const appearance = {
-  container: "flex flex-col gap-2 pb-3",
+  container: "",
   card: "flex flex-row gap-2 items-center",
   list: "pt-3 flex flex-col gap-2"
 };

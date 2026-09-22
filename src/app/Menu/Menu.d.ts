@@ -1,8 +1,9 @@
 interface MenuEntry {
+  id: string
   name: string
   icon?: import("lucide-react/dynamic").IconName
   link?: string
-  items?: MenuEntries
+  items?: MenuEntry[]
 }
 
 interface MenuEntries {

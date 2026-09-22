@@ -1,7 +1,16 @@
 import Brand from "@/assets/brand.svg";
 import NavLink from "@/app/NavLink.jsx";
 import Button from "@/app/Button.jsx";
+import Selector from "@/app/Selector.jsx";
 import { merge } from "@lib/merge";
+
+const loginAs = [
+  { id: "",  label: 'Войти как...' },
+  { id: "1", label: 'Администратор' },
+  { id: "2", label: 'Техник' },
+  { id: "3", label: 'Врач' },
+  { id: "4", label: 'Курьер' },
+];
 
 function Welcome({ className = appearance }) {
   const a = merge(appearance, className);
@@ -11,6 +20,7 @@ function Welcome({ className = appearance }) {
       <Brand className="w-96 mb-8" />
       <p className="uppercase tracking-widest mb-2">Лаборатория</p>
       <h1 className="text-4xl text-center mb-8">Современные<br />Эстетические<br />Решения</h1>
+      <Selector className={{ container: 'mb-4' }} options={loginAs} />
       <NavLink to="/dashboard"><Button variant="primary" size="lg">Sign in</Button></NavLink>
     </main>
   );

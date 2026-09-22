@@ -43,6 +43,31 @@ body {
     sans-serif;
 }
 
+
+/* ------------------------------------------------------- Select / Option ----- */
+/* 
+select, ::picker(select) {
+  appearance: base-select;
+}
+
+::picker(select) {
+  background-color: #ffffff;
+  padding: 4px;
+}
+
+option:hover, option:focus-visible {
+  background-color: var(--color-primary-800) !important;
+  color: #ffffff !important;
+}
+
+option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+*/
+
+/* ------------------------------------------------------------- Utilities ----- */
+
 @layer utilities {
   .centered {
     @apply h-full flex flex-col gap-2 justify-center items-center; 

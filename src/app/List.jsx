@@ -3,16 +3,16 @@ import { merge } from "@lib/merge";
 /**
  * @param {{
  *   items?: import('react').ReactNode[]
- *   isRow?: boolean
+ *   asRow?: boolean
  *   className?: typeof appearance
  * }} props 
  */
 function List({
   items = [],
-  isRow = false,
+  asRow = false,
   className = appearance
 }) {
-  const a = merge(appearance, { container: isRow ? 'flex-row' : 'flex-col' }, className);
+  const a = merge(appearance, { container: asRow ? 'flex-row' : 'flex-col' }, className);
 
   if (!items) return null;
   const itemElements = items.map((item, i) => <li key={i} className={a.element}>{item}</li>);

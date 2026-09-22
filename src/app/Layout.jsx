@@ -6,7 +6,7 @@ function Layout({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <div className="grid grid-cols-[minmax(200px,1fr)_6fr] h-screen *:p-1">
+    <div className="grid grid-rows-[64px_1fr] h-screen overflow-hidden">
       <Navigation />
       <Outlet />
     </div>
