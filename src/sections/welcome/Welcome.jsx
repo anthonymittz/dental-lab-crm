@@ -1,4 +1,5 @@
 import { merge } from "@lib/merge";
+import { NavLink } from "react-router";
 
 function Welcome({ className = appearance }) {
   const a = merge(appearance, className);
@@ -6,6 +7,7 @@ function Welcome({ className = appearance }) {
   return (
     <div className={a.container}>
       Welcome
+      <NavLink to='/app'>Sign in</NavLink>
     </div>
   );
 }
