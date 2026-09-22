@@ -13,7 +13,7 @@ function Welcome({ className = appearance }) {
 }
 
 const appearance = {
-  container: "centered"
+  container: "centered bg-test-100 text-test-800"
 };
 
 /**

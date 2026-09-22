@@ -1,7 +1,18 @@
 @theme inline {
   --color-background:           #fefefe;
   --color-foreground:           #2b221f;
-  --color-muted:                #2e2e2e;
+
+  --color-muted-50:             #070707;
+  --color-muted-100:            #141414;
+  --color-muted-200:            #212121;
+  --color-muted-300:            #2e2e2e;
+  --color-muted-400:            #474747;
+  --color-muted-500:            #545454;
+  --color-muted-600:            #6c6c6c;
+  --color-muted-700:            #969696;
+  --color-muted-800:            #c0c0c0;
+  --color-muted-900:            #d5d5d5;
+  --color-muted-950:            #eaeaea;
 
   --color-info:                 #00b2dd;
   --color-success:              #0cae00;
@@ -31,4 +42,16 @@
   --color-accent-800:           #542518;
   --color-accent-900:           #2a130c;
   --color-accent-950:           #210f09;
+
+  --color-test-50:              #000000; /* current input text */
+  --color-test-100:             #101010; /* backdrop */
+  --color-test-200:             #161616; /* panel */
+  --color-test-300:             #1f1f1f; /* item, tooltip bg */ 
+  --color-test-400:             #363636; /* item hover bg, menu (-4%) */
+  --color-test-500:             #525252; /* toggle */
+  --color-test-600:             #808080; /* deselected text, icon */
+  --color-test-700:             #838383; /* text */
+  --color-test-800:             #b1b1b1; /* item text */ 
+  --color-test-900:             #cccccc; /* selected text, icon */
+  --color-test-950:             #ffffff; /* current input bg */
 }
