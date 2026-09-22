@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+@tailwind utilities;
+
+@import "./theme.css";
+
+body {
+  @apply h-screen overflow-hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* ---------------------------------------------------------------- Select ----- */
+
+select, ::picker(select) {
+  appearance: base-select;
+}
+
+::picker(select) {
+  background-color: #ffffff;
+  padding: 4px;
+}
+
+option:hover, option:focus-visible {
+  background-color: var(--color-primary-800) !important;
+  color: #ffffff !important;
+}
+
+option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------- Utility ----- */
+
+.centered {
+  @apply h-full flex flex-col gap-2 justify-center items-center; 
+}
+
+/* ------------------------------------------------------------ Components ----- */
+
+.card {
+  @apply px-3 py-2.5 rounded-md;
+}

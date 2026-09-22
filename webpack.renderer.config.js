@@ -1,5 +1,6 @@
 const rules = require('./webpack.rules');
 const path = require('path');
+const webpack = require('webpack');
 
 rules.push({
   test: /\.css$/,
@@ -47,6 +48,11 @@ module.exports = (_, argv) => {
         '@lib': path.resolve(__dirname, 'libs'),
       }
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
+      }),
+    ]
   }
   return config;
 };
