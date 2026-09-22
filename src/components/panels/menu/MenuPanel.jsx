@@ -36,7 +36,7 @@ function MenuPanel({ className = appearance }) {
 }
 
 const appearance = {
-  container: "grid grid-cols-[1fr_4fr_1fr] [&>*:nth-child(3n+1)]:justify-start [&>*:nth-child(3n+2)]:justify-center [&>*:nth-child(3n)]:justify-end px-4 py-2"
+  container: "grid grid-cols-[1fr_4fr_1fr] [&>*:nth-child(3n+1)]:justify-start [&>*:nth-child(3n+2)]:justify-center [&>*:nth-child(3n)]:justify-end px-4 py-2 bg-primary-50"
 };
 
 export default MenuPanel;
