@@ -1,4 +1,4 @@
-// import { Route, Routes, useNavigate } from 'react-router';
+// import { Route, Routes } from 'react-router';
 // import Layout from '@/app/Layout.jsx';
 // import * as Pages from "./pages";
 // import useReload from '@/app/useReload.js';
@@ -29,7 +29,5 @@ function App() {
 //     </Routes>
 //   );
 // }
-
-
 
 export default App;

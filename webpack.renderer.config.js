@@ -1,4 +1,4 @@
-// @ts-nocheck
+const { webpack } = require('webpack');
 const rules = require('./webpack.rules');
 const path = require('path');
 
@@ -37,9 +37,9 @@ rules.push({
 })
 
 module.exports = (env, argv) => {
-  const isProduction  = argv.mode === 'production';
-  return {
-    mode: isProduction ? 'production' : 'development',
+  /** @type {import('webpack').Configuration} */
+  const config = {
+    mode: argv.mode === 'production' ? 'production' : 'development',
     watchOptions: {
       ignored: [
         '**/node_modules/**',
@@ -58,5 +58,9 @@ module.exports = (env, argv) => {
     module: {
       rules,
     },
+    node: {
+      __dirname: false
+    }
   }
+  return config;
 };
