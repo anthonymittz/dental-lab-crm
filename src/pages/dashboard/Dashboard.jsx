@@ -14,4 +14,12 @@ const appearance = {
   container: "centered"
 };
 
+/**
+ * @function Dashboard 
+ * @param {{ 
+ *   className?: Partial<typeof appearance>
+ * }} props
+ * @returns {JSX.Element}
+ */
+
 export default Dashboard;

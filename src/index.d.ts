@@ -7,6 +7,17 @@ declare global {
     // ipc: IpcAPI
   }
 
+  type IconName = 
+    "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | 
+    "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
+
+  interface LinkMeta {
+    id: string;
+    to: string;
+    label: string;
+    icon: IconName
+  }
+
   declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
   declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 

@@ -1,5 +1,9 @@
 # Configuration
 
+## NB
+
+- DynamicIcon causes the start script to get stuck
+
 ## Deps
 
 bcrypt

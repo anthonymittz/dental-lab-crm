@@ -18,7 +18,7 @@ rules.push({
     options: {
       exclude: /node_modules/,
       presets: ['@babel/preset-react'],
-      compact: false
+      compact: true 
     },
   },
 });

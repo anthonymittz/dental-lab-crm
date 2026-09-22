@@ -1,22 +1,19 @@
+import NavLink from "@/components/elements/navigation/NavLink.jsx";
 import { merge } from "@lib/merge";
-import { Outlet } from "react-router";
 
 /**
- * @param {{
+ * @param {{ 
  *   className?: Partial<typeof appearance>
- *   navigation?: import("react").ReactNode 
  * }} props
  */
-function AppLayout({
-  className = appearance,
-  navigation = null
-}) {
+function Brand({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
     <div className={a.container}>
-      { navigation }
-      <Outlet />
+      <NavLink to="/app/dashboard">
+        Brand
+      </NavLink>
     </div>
   );
 }
@@ -25,4 +22,4 @@ const appearance = {
   container: ""
 };
 
-export default AppLayout;
+export default Brand;

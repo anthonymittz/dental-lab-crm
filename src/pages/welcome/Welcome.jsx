@@ -1,12 +1,12 @@
+import NavLink from "@/components/elements/navigation/NavLink.jsx";
 import { merge } from "@lib/merge";
-import { NavLink } from "react-router";
 
 function Welcome({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
     <div className={a.container}>
-      Welcome
+      <span>Welcome</span>
       <NavLink to='/app'>Sign in</NavLink>
     </div>
   );
@@ -15,5 +15,13 @@ function Welcome({ className = appearance }) {
 const appearance = {
   container: "centered"
 };
+
+/**
+ * @function Welcome 
+ * @param {{ 
+ *   className?: Partial<typeof appearance>
+ * }} props
+ * @returns {JSX.Element}
+ */
 
 export default Welcome;

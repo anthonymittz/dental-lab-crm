@@ -14,4 +14,12 @@ const appearance = {
   container: "centered"
 };
 
+/**
+ * @function Orders 
+ * @param {{ 
+ *   className?: Partial<typeof appearance>
+ * }} props
+ * @returns {JSX.Element}
+ */
+
 export default Orders;
