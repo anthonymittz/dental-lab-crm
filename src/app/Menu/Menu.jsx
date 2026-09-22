@@ -2,6 +2,16 @@ import List from "@/app/List.jsx";
 import { merge } from "@lib/merge";
 import { DynamicIcon } from "lucide-react/dynamic.js";
 
+/** 
+ * @typedef {{
+ *   id: string
+ *   name: string
+ *   icon?: import("lucide-react/dynamic").IconName
+ *   link?: string
+ *   items?: MenuEntry[]  
+ * }} MenuEntry
+ */
+
 /** @type {MenuEntry[]} */
 const menu = [
   { id: 'schedule', name: 'Agenda', icon: 'calendar-clock', link: '/agenda' },

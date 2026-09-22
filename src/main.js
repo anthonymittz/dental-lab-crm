@@ -12,12 +12,10 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      // @ts-ignore
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
 
-  // @ts-ignore
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   mainWindow.webContents.openDevTools();
 };
@@ -25,7 +23,7 @@ const createWindow = () => {
 const menu = new Menu();
 const submenu = Menu.buildFromTemplate([{
   label: 'Reload app',
-  click: () => { mainWindow?.webContents.send('reload'); console.log('Reload...')},
+  // click: () => { mainWindow?.webContents.send('reload'); console.log('Reload...')},
   accelerator: 'CommandOrControl+Shift+R'
 }]);
 menu.append(new MenuItem({ label: 'App', submenu }));

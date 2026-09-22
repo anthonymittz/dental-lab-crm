@@ -40,6 +40,14 @@ module.exports = (env, argv) => {
   const isProduction  = argv.mode === 'production';
   return {
     mode: isProduction ? 'production' : 'development',
+    watchOptions: {
+      ignored: [
+        '**/node_modules/**',
+        '**/.webpack/**',
+        '**/.git/**',
+        '**/out/**',
+      ]
+    },
     devtool: 'source-map',
     resolve: {
       alias: {

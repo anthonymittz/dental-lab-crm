@@ -30,7 +30,8 @@ async function packageAfterCopy(_forgeConfig, buildPath) {
 module.exports = {
   packagerConfig: {
     ignore: [
-      /node_modules\/(?!(better-sqlite3|bcrypt|node-gyp-build|bindings|file-uri-to-path)\/)/
+      // /node_modules\/(?!(better-sqlite3|bcrypt|node-gyp-build|bindings|file-uri-to-path)\/)/
+      /^(?!\/\.webpack|\/package\.json)node_modules\/(?!(better-sqlite3|bcrypt|node-gyp-build|bindings|file-uri-to-path)\/)/
     ],
     asar: {
       unpack: '*.{node,dylib,dll,so}',
