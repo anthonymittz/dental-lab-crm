@@ -18,10 +18,12 @@ function Link({ data }) {
   const a = merge(linkAppearance);
 
   return (
-    <NavLink to={data.to} className={({ isActive }) => is(a.link, isActive && 'bg-test-400 text-test-900')}>
-      <Icon strokeWidth={1.5} type={data.icon} />
+    <div className={a.container}>
+      <NavLink to={data.to} className={({ isActive }) => is(a.link, isActive && 'bg-test-400 text-test-900')}>
+        <Icon strokeWidth={1.5} type={data.icon} />
+      </NavLink>
       <div className={a.tooltip}>{data.label}</div>
-    </NavLink>
+    </div>
   );
 }
 
@@ -30,7 +32,8 @@ const listAppearance = {
 };
 
 const linkAppearance = {
-  link: "group relative p-1.5 rounded-sm text-test-600 hover:bg-test-400 hover:text-test-900",
+  container: "group relative p-1.5 rounded-sm text-test-600 hover:bg-test-400 hover:text-test-900",
+  link: "",
   active: "bg",
   tooltip: `
     absolute left-full top-1/2 ml-4 -translate-y-1/2 

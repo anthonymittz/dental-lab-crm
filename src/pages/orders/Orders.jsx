@@ -1,3 +1,4 @@
+import Search from "@/components/elements/Search.jsx";
 import { merge } from "@lib/merge";
 
 function Orders({ className = appearance }) {
@@ -5,13 +6,20 @@ function Orders({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Orders
+      <div className={a.hed}>
+        <h2 className={a.section}>Orders</h2>
+        <Search />
+      </div>
+      <div className={a.content}>Content</div>
     </div>
   );
 }
 
 const appearance = {
-  container: "centered"
+  container: "grid grid-rows-[max-content_1fr] gap-1 *:bg-test-200",
+  hed: "px-4 py-2 flex gap-4 items-center",
+  section: "select-none",
+  content: "px-4 py-2"
 };
 
 /**

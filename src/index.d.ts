@@ -8,7 +8,7 @@ declare global {
   }
 
   type IconName = 
-    "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | 
+    "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {

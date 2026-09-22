@@ -12,7 +12,9 @@ const iconMap = {
   login: Icons.LogIn,
   logout: Icons.LogOut,
   wallet: Icons.Wallet,
-  shelvingUnit: Icons.ShelvingUnit
+  shelvingUnit: Icons.ShelvingUnit,
+  search: Icons.Search,
+  x: Icons.X,
 };
 
 /**
