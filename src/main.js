@@ -1,14 +1,12 @@
-const { app, ipcMain, BrowserWindow, Menu, MenuItem } = require('electron');
-const { initIpc } = require('@/ipc.js');
+const { app, BrowserWindow } = require('electron');
+const path = require('node:path');
 
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
-/** @type {BrowserWindow|null} */
-let mainWindow = null;
 
 const createWindow = () => {
-  mainWindow = new BrowserWindow({
+  const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -20,21 +18,7 @@ const createWindow = () => {
   mainWindow.webContents.openDevTools();
 };
 
-const menu = new Menu();
-const submenu = Menu.buildFromTemplate([{
-  label: 'Reload app',
-  // click: () => { mainWindow?.webContents.send('reload'); console.log('Reload...')},
-  accelerator: 'CommandOrControl+Shift+R'
-}]);
-menu.append(new MenuItem({ label: 'App', submenu }));
-Menu.setApplicationMenu(menu);
-
 app.whenReady().then(() => {
-  initIpc(ipcMain, 
-    { action: () => console.log('[IPC] Some action!') }, 
-    { ping: data => Promise.resolve("Pinging back: " + JSON.stringify(data)) }
-  );
-    
   createWindow();
 
   app.on('activate', () => {
@@ -44,8 +28,5 @@ app.whenReady().then(() => {
   });
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
+app.on('window-all-closed', () => 
+  process.platform !== 'darwin' && app.quit());
