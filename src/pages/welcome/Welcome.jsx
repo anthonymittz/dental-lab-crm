@@ -1,4 +1,4 @@
-import NavLink from "@/components/elements/navigation/NavLink.jsx";
+import NavLink from "@/components/elements/NavLink.jsx";
 import { merge } from "@lib/merge";
 
 function Welcome({ className = appearance }) {

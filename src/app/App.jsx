@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import AppLayout from "@/components/layouts/app/AppLayout.jsx";
+import AppLayout from "@/components/layouts/AppLayout.jsx";
 
 import Welcome from "@/pages/welcome/Welcome.jsx";
 import Agenda from "@/pages/agenda/Agenda.jsx";
@@ -12,7 +12,7 @@ import Inventory from "@/pages/inventory/Inventory.jsx";
 import Orders from "@/pages/orders/Orders.jsx";
 import Settings from "@/pages/settings/Settings.jsx";
 
-import MenuPanel from "@/components/panels/menu/MenuPanel.jsx";
+import MenuPanel from "@/components/panels/MenuPanel.jsx";
 
 function App() {
   return (

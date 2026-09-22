@@ -22,7 +22,7 @@ function AppLayout({
 }
 
 const appearance = {
-  container: ""
+  container: "h-screen grid grid-cols-[max-content_1fr]"
 };
 
 export default AppLayout;

@@ -1,5 +1,5 @@
-import Brand from "@/components/elements/brand/Brand.jsx";
-import Navigation from "@/components/elements/navigation/Navigation.jsx";
+import Brand from "@/components/elements/Brand.jsx";
+import Navigation from "@/components/elements/Navigation.jsx";
 import { merge } from "@lib/merge";
 
 /** @type {{primary: LinkMeta[], secondary: LinkMeta[]}} */
@@ -36,7 +36,7 @@ function MenuPanel({ className = appearance }) {
 }
 
 const appearance = {
-  container: "grid grid-cols-[1fr_4fr_1fr] [&>*:nth-child(3n+1)]:justify-start [&>*:nth-child(3n+2)]:justify-center [&>*:nth-child(3n)]:justify-end px-4 py-2 bg-primary-50"
+  container: "p-2 flex flex-col gap-1 justify-between items-center bg-primary-50"
 };
 
 export default MenuPanel;

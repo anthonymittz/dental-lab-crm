@@ -1,4 +1,4 @@
-import NavLink from "@/components/elements/navigation/NavLink.jsx";
+import NavLink from "@/components/elements/NavLink.jsx";
 import { merge } from "@lib/merge";
 import Logo from '@/assets/brand-sm.svg';
 
@@ -13,8 +13,8 @@ function Brand({ className = appearance }) {
   return (
     <NavLink to="/app/dashboard">
     <div className={a.container}>
-        <Logo className={a.logo} />
-        <h1 className={a.name}>СЭР</h1>
+      <Logo className={a.logo} />
+      {/* <h1 className={a.name}>СЭР</h1> */}
     </div>
     </NavLink>
   );
@@ -22,7 +22,7 @@ function Brand({ className = appearance }) {
 
 const appearance = {
   container: "flex gap-2 items-center",
-  logo: "h-8",
+  logo: "w-8",
   name: "text-lg"
 };
 
