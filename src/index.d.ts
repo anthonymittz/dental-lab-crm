@@ -9,19 +9,21 @@ declare global {
 
   type IconName = 
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
+    "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {
     id: string;
     to: string;
     label: string;
-    icon: IconName
+    icon: IconName;
   }
 
   interface TabMeta {
     id: string;
     to: string;
     label: string;
+    icon?: IconName;
   }
 
   declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;

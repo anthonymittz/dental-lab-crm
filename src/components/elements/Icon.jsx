@@ -15,6 +15,12 @@ const iconMap = {
   shelvingUnit: Icons.ShelvingUnit,
   search: Icons.Search,
   x: Icons.X,
+  stickyNote: Icons.StickyNote,
+  hammer: Icons.Hammer,
+  stickyNoteCheck: Icons.StickyNoteCheck,
+  listTodo: Icons.ListTodo,
+  fileBox: Icons.FileBox,
+  archive: Icons.Archive,
 };
 
 /**
