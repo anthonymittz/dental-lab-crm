@@ -21,6 +21,8 @@ const iconMap = {
   listTodo: Icons.ListTodo,
   fileBox: Icons.FileBox,
   archive: Icons.Archive,
+  calendarRange: Icons.CalendarRange,
+  kanban: Icons.Kanban,
 };
 
 /**

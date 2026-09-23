@@ -10,6 +10,7 @@ declare global {
   type IconName = 
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
+    "calendarRange" | "kanban" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {
@@ -25,6 +26,9 @@ declare global {
     label: string;
     icon?: IconName;
   }
+
+  type ExtractClassName<T extends React.ComponentType<any>> =
+    Partial<React.ComponentProps<T>>['className']
 
   declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
   declare const MAIN_WINDOW_WEBPACK_ENTRY: string;

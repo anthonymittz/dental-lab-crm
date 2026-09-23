@@ -10,9 +10,7 @@ const tabs = [
 ];
 
 /**
- * @param {{ 
- *   className?: Partial<import("react").ComponentProps<typeof TabLayout>['className']>
- * }} props
+ * @param {{ className?: ExtractClassName<TabLayout> }} props
  */
 function Orders({ className }) {
   return <TabLayout 

@@ -20,12 +20,20 @@ import ArchivedOrders from "@/pages/orders/ArchivedOrders.jsx";
 import Projects from "@/pages/orders/Projects.jsx";
 import Tasks from "@/pages/orders/Tasks.jsx";
 
+import OverviewAgenda from "@/pages/agenda/OverviewAgenda.jsx";
+import Calendar from "@/pages/agenda/Calendar.jsx";
+import Kanban from "@/pages/agenda/Kanban.jsx";
+
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Welcome />} />
       <Route path='/app' element={<AppLayout menu={<MenuPanel />} />}>
-        <Route path='agenda' element={<Agenda />} />
+        <Route path='agenda' element={<Agenda />}>
+          <Route index element={<OverviewAgenda />} />
+          <Route path='calendar' element={<Calendar />} />
+          <Route path='kanban' element={<Kanban />} />
+        </Route>
         <Route path='business' element={<Business />} />
         <Route path='dashboard' element={<Dashboard />} />
         <Route path='deliveries' element={<Deliveries />} />

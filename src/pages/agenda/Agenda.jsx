@@ -1,25 +1,22 @@
+import TabLayout from "@/components/layouts/TabLayout.jsx";
 import { merge } from "@lib/merge";
 
-function Agenda({ className = appearance }) {
-  const a = merge(appearance, className);
-
-  return (
-    <div className={a.container}>
-      Agenda
-    </div>
-  );
-}
-
-const appearance = {
-  container: "centered"
-};
+/** @type { TabMeta[] } */
+const tabs = [
+  { id: 'calendar', to: '/app/agenda/calendar', label: "Calendar", icon: 'calendarRange' },
+  { id: 'kanban', to: '/app/agenda/kanban', label: "Kanban", icon: 'kanban' },
+];
 
 /**
- * @function Agenda 
- * @param {{ 
- *   className?: Partial<typeof appearance>
- * }} props
- * @returns {JSX.Element}
+ * @param {{ className?: ExtractClassName<TabLayout> }} props
  */
+function Agenda({ className }) {
+  return <TabLayout 
+    title="Agenda"
+    to="/app/agenda"
+    tabs={tabs}
+    className={className} 
+    />;
+}
 
 export default Agenda;
