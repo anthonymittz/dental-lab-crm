@@ -14,6 +14,12 @@ import Settings from "@/pages/settings/Settings.jsx";
 
 import MenuPanel from "@/components/panels/MenuPanel.jsx";
 
+import OverviewOrders from "@/pages/orders/OverviewOrders.jsx";
+import CurrentOrders from "@/pages/orders/CurrentOrders.jsx";
+import ArchivedOrders from "@/pages/orders/ArchivedOrders.jsx";
+import Projects from "@/pages/orders/Projects.jsx";
+import Tasks from "@/pages/orders/Tasks.jsx";
+
 function App() {
   return (
     <Routes>
@@ -26,7 +32,13 @@ function App() {
         <Route path='fallback' element={<Fallback />} />
         <Route path='finances' element={<Finances />} />
         <Route path='inventory' element={<Inventory />} />
-        <Route path='orders' element={<Orders />} />
+        <Route path='orders' element={<Orders />}>
+          <Route index element={<OverviewOrders />} />
+          <Route path='current' element={<CurrentOrders />} />
+          <Route path='archive' element={<ArchivedOrders />} />
+          <Route path='projects' element={<Projects />} />
+          <Route path='tasks' element={<Tasks />} />
+        </Route>
         <Route path='settings' element={<Settings />} />
         <Route path='welcome' element={<Welcome />} />
       </Route>

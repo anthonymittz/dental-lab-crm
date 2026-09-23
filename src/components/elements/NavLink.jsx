@@ -21,6 +21,7 @@ function NavLink({
   );
 }
 
+/** @type {string} */
 const appearance = "";
 
 export default NavLink;
