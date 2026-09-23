@@ -31,6 +31,9 @@ const iconMap = {
   circlePile: Icons.CirclePile,
   drill: Icons.Drill,
   recycle: Icons.Recycle,
+  flaskConical: Icons.FlaskConical,
+  hospital: Icons.Hospital,
+  trendingUp: Icons.TrendingUp,
 };
 
 /**

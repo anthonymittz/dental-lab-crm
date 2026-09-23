@@ -12,6 +12,7 @@ declare global {
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
     "calendarRange" | "kanban" | "calendarClock" | "package" | 
     "factory" | "tag" | "idCardLanyard" | "circlePile" | "drill" | "recycle" |
+    "flaskConical" | "hospital" | "trendingUp" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {

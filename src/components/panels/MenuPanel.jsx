@@ -9,7 +9,7 @@ const links = {
     { id: 'agenda', to: '/app/agenda', label: 'Agenda', icon: 'calendarDays' },
     { id: 'deliveries', to: '/app/deliveries', label: 'Deliveries', icon: 'truck' },
     { id: 'business', to: '/app/business', label: 'Business', icon: 'handshake' },
-    { id: 'finances', to: '/app/finances', label: 'Finances', icon: 'wallet' },
+    { id: 'statistics', to: '/app/statistics', label: 'Statistics', icon: 'trendingUp' },
     { id: 'inventory', to: '/app/inventory', label: 'Inventory', icon: 'shelvingUnit' },
   ],
   secondary: [

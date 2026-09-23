@@ -7,7 +7,7 @@ import Business from "@/pages/business/Business.jsx";
 import Dashboard from "@/pages/dashboard/Dashboard.jsx";
 import Deliveries from "@/pages/deliveries/Deliveries.jsx";
 import Fallback from "@/pages/fallback/Fallback.jsx";
-import Finances from "@/pages/finances/Finances.jsx";
+import Statistics from "@/pages/statistics/Statistics.jsx";
 import Inventory from "@/pages/inventory/Inventory.jsx";
 import Orders from "@/pages/orders/Orders.jsx";
 import Settings from "@/pages/settings/Settings.jsx";
@@ -34,6 +34,10 @@ import Offerables from "@/pages/business/Offerables.jsx";
 import Pricelists from "@/pages/business/Pricelists.jsx";
 import Employees from "@/pages/business/Employees.jsx";
 import Workflows from "@/pages/business/Workflows.jsx";
+
+import OverviewStatistics from "@/pages/statistics/OverviewStatistics.jsx";
+import LabStatistics from "@/pages/statistics/LabStatistics.jsx";
+import ClinicStatistics from "@/pages/statistics/ClinicStatistics.jsx";
 
 import OverviewInventory from "@/pages/inventory/OverviewInventory.jsx";
 import Materials from "@/pages/inventory/Materials.jsx";
@@ -65,7 +69,11 @@ function App() {
           <Route path='archived' element={<ArchivedDeliveries />} />
         </Route>
         <Route path='fallback' element={<Fallback />} />
-        <Route path='finances' element={<Finances />} />
+        <Route path='statistics' element={<Statistics />}>
+          <Route index element={<OverviewStatistics />} />
+          <Route path='lab' element={<LabStatistics />} />
+          <Route path='clinic' element={<ClinicStatistics />} />
+        </Route>
         <Route path='inventory' element={<Inventory />}>
           <Route index element={<OverviewInventory />} />
           <Route path='materials' element={<Materials />} />
