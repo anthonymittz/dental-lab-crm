@@ -1,3 +1,4 @@
+import Search from "@/components/elements/Search.jsx";
 import TabLayout from "@/components/layouts/TabLayout.jsx";
 import { merge } from "@lib/merge";
 
@@ -15,6 +16,7 @@ function Agenda({ className }) {
     title="Agenda"
     to="/app/agenda"
     tabs={tabs}
+    hed={<Search />}
     className={className} 
     />;
 }

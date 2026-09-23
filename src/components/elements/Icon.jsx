@@ -23,6 +23,8 @@ const iconMap = {
   archive: Icons.Archive,
   calendarRange: Icons.CalendarRange,
   kanban: Icons.Kanban,
+  calendarClock: Icons.CalendarClock,
+  package: Icons.Package,
 };
 
 /**

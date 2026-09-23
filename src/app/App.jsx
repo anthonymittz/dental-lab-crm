@@ -23,6 +23,10 @@ import Tasks from "@/pages/orders/Tasks.jsx";
 import OverviewAgenda from "@/pages/agenda/OverviewAgenda.jsx";
 import Calendar from "@/pages/agenda/Calendar.jsx";
 import Kanban from "@/pages/agenda/Kanban.jsx";
+import OverviewDeliveries from "@/pages/deliveries/OverviewDeliveries.jsx";
+import CurrentDeliveries from "@/pages/deliveries/CurrentDeliveries.jsx";
+import PlannedDeliveries from "@/pages/deliveries/PlannedDeliveries.jsx";
+import ArchivedDeliveries from "@/pages/deliveries/ArchivedDeliveries.jsx";
 
 function App() {
   return (
@@ -36,7 +40,12 @@ function App() {
         </Route>
         <Route path='business' element={<Business />} />
         <Route path='dashboard' element={<Dashboard />} />
-        <Route path='deliveries' element={<Deliveries />} />
+        <Route path='deliveries' element={<Deliveries />}>
+          <Route index element={<OverviewDeliveries />} />
+          <Route path='current' element={<CurrentDeliveries />} />
+          <Route path='planned' element={<PlannedDeliveries />} />
+          <Route path='archived' element={<ArchivedDeliveries />} />
+        </Route>
         <Route path='fallback' element={<Fallback />} />
         <Route path='finances' element={<Finances />} />
         <Route path='inventory' element={<Inventory />} />

@@ -10,7 +10,7 @@ declare global {
   type IconName = 
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
-    "calendarRange" | "kanban" |
+    "calendarRange" | "kanban" | "calendarClock" | "package" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {
