@@ -1,3 +1,4 @@
+import { businessWorkflows } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Workflows({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Workflows
+      { businessWorkflows }
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { statisticsClinic } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function ClinicStatistics({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Clinic Statistics
+      { statisticsClinic }
     </div>
   );
 }

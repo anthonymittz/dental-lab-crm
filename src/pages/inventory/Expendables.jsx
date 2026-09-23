@@ -1,3 +1,4 @@
+import { inventoryExpendables } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Expendables({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Expendables
+      { inventoryExpendables }
     </div>
   );
 }

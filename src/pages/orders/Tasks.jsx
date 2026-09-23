@@ -1,3 +1,4 @@
+import { orderTasks } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Tasks({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Tasks
+      { orderTasks }
     </div>
   );
 }

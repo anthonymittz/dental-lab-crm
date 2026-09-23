@@ -1,3 +1,4 @@
+import { orderCurrent } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function CurrentOrders({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Current
+      { orderCurrent }
     </div>
   );
 }

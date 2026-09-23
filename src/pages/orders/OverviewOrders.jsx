@@ -1,3 +1,4 @@
+import { orderOverview } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function OverviewOrders({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Overview
+      { orderOverview }
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { inventoryOverview } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function OverviewInventory({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Overview
+      { inventoryOverview }
     </div>
   );
 }

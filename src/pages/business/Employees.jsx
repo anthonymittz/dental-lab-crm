@@ -1,3 +1,4 @@
+import { businessEmployees } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Employees({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Employees
+      { businessEmployees }
     </div>
   );
 }

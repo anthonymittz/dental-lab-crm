@@ -1,3 +1,4 @@
+import { businessOfferables } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Offerables({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Products & Services
+      { businessOfferables }
     </div>
   );
 }

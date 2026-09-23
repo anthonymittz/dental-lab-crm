@@ -35,7 +35,7 @@ option {
 /* --------------------------------------------------------------- Utility ----- */
 
 .centered {
-  @apply h-full flex flex-col gap-2 justify-center items-center; 
+  @apply h-full flex flex-col gap-2 justify-center items-center whitespace-break-spaces;
 }
 
 /* ------------------------------------------------------------ Components ----- */

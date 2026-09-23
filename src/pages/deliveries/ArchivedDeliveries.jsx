@@ -1,3 +1,4 @@
+import { deliveriesArchived } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function ArchivedDeliveries({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Archived Deliveries
+      { deliveriesArchived }
     </div>
   );
 }

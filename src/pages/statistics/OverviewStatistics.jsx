@@ -1,3 +1,4 @@
+import { statisticsOverview } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function OverviewStatistics({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Overview
+      { statisticsOverview }
     </div>
   );
 }

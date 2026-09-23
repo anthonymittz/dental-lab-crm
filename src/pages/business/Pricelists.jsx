@@ -1,3 +1,4 @@
+import { businessPricelists } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Pricelists({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Price Lists
+      { businessPricelists }
     </div>
   );
 }

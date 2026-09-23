@@ -1,3 +1,4 @@
+import { agendaCalendar } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function Calendar({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Calendar
+      { agendaCalendar }
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { deliveriesPlanned } from "@/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
@@ -10,7 +11,7 @@ function PlannedDeliveries({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Planned Deliveries
+      { deliveriesPlanned }
     </div>
   );
 }
