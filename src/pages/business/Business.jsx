@@ -13,7 +13,6 @@ const tabs = [
 /**
  * @param {{ className?: ExtractClassName<TabLayout> }} props
  */
-
 function Business({ className }) {
   return <TabLayout
     title="Business"

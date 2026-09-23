@@ -11,7 +11,7 @@ declare global {
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
     "calendarRange" | "kanban" | "calendarClock" | "package" | 
-    "factory" | "tag" | "idCardLanyard" |
+    "factory" | "tag" | "idCardLanyard" | "circlePile" | "drill" | "recycle" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
   interface LinkMeta {

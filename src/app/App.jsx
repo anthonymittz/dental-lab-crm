@@ -23,15 +23,22 @@ import Tasks from "@/pages/orders/Tasks.jsx";
 import OverviewAgenda from "@/pages/agenda/OverviewAgenda.jsx";
 import Calendar from "@/pages/agenda/Calendar.jsx";
 import Kanban from "@/pages/agenda/Kanban.jsx";
+
 import OverviewDeliveries from "@/pages/deliveries/OverviewDeliveries.jsx";
 import CurrentDeliveries from "@/pages/deliveries/CurrentDeliveries.jsx";
 import PlannedDeliveries from "@/pages/deliveries/PlannedDeliveries.jsx";
 import ArchivedDeliveries from "@/pages/deliveries/ArchivedDeliveries.jsx";
+
 import OverviewBusiness from "@/pages/business/OverviewBusiness.jsx";
 import Offerables from "@/pages/business/Offerables.jsx";
 import Pricelists from "@/pages/business/Pricelists.jsx";
 import Employees from "@/pages/business/Employees.jsx";
 import Workflows from "@/pages/business/Workflows.jsx";
+
+import OverviewInventory from "@/pages/inventory/OverviewInventory.jsx";
+import Materials from "@/pages/inventory/Materials.jsx";
+import Tools from "@/pages/inventory/Tools.jsx";
+import Expendables from "@/pages/inventory/Expendables.jsx";
 
 function App() {
   return (
@@ -59,7 +66,12 @@ function App() {
         </Route>
         <Route path='fallback' element={<Fallback />} />
         <Route path='finances' element={<Finances />} />
-        <Route path='inventory' element={<Inventory />} />
+        <Route path='inventory' element={<Inventory />}>
+          <Route index element={<OverviewInventory />} />
+          <Route path='materials' element={<Materials />} />
+          <Route path='tools' element={<Tools />} />
+          <Route path='expendables' element={<Expendables />} />
+        </Route>
         <Route path='orders' element={<Orders />}>
           <Route index element={<OverviewOrders />} />
           <Route path='current' element={<CurrentOrders />} />

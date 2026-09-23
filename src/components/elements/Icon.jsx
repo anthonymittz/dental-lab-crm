@@ -28,6 +28,9 @@ const iconMap = {
   factory: Icons.Factory,
   tag: Icons.Tag,
   idCardLanyard: Icons.IdCardLanyard,
+  circlePile: Icons.CirclePile,
+  drill: Icons.Drill,
+  recycle: Icons.Recycle,
 };
 
 /**
