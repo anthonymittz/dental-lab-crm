@@ -25,6 +25,9 @@ const iconMap = {
   kanban: Icons.Kanban,
   calendarClock: Icons.CalendarClock,
   package: Icons.Package,
+  factory: Icons.Factory,
+  tag: Icons.Tag,
+  idCardLanyard: Icons.IdCardLanyard,
 };
 
 /**

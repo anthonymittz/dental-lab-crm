@@ -27,6 +27,11 @@ import OverviewDeliveries from "@/pages/deliveries/OverviewDeliveries.jsx";
 import CurrentDeliveries from "@/pages/deliveries/CurrentDeliveries.jsx";
 import PlannedDeliveries from "@/pages/deliveries/PlannedDeliveries.jsx";
 import ArchivedDeliveries from "@/pages/deliveries/ArchivedDeliveries.jsx";
+import OverviewBusiness from "@/pages/business/OverviewBusiness.jsx";
+import Offerables from "@/pages/business/Offerables.jsx";
+import Pricelists from "@/pages/business/Pricelists.jsx";
+import Employees from "@/pages/business/Employees.jsx";
+import Workflows from "@/pages/business/Workflows.jsx";
 
 function App() {
   return (
@@ -38,7 +43,13 @@ function App() {
           <Route path='calendar' element={<Calendar />} />
           <Route path='kanban' element={<Kanban />} />
         </Route>
-        <Route path='business' element={<Business />} />
+        <Route path='business' element={<Business />}>
+          <Route index element={<OverviewBusiness />} />
+          <Route path="offerables" element={<Offerables />} />
+          <Route path="pricelists" element={<Pricelists />} />
+          <Route path="employees" element={<Employees />} />
+          <Route path="workflows" element={<Workflows />} />
+        </Route>
         <Route path='dashboard' element={<Dashboard />} />
         <Route path='deliveries' element={<Deliveries />}>
           <Route index element={<OverviewDeliveries />} />
