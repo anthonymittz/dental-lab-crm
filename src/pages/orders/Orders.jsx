@@ -1,7 +1,16 @@
 import Search from "@/components/elements/Search.jsx";
 import Tabs from "@/components/elements/Tabs.jsx";
+import Title from "@/components/elements/Title.jsx";
 import { merge } from "@lib/merge";
 import { Outlet } from "react-router";
+
+/** @type { TabMeta[] } */
+const tabs = [
+  { id: 'current', to: '/app/orders/current', label: "Current", icon: 'stickyNote' },
+  { id: 'archive', to: '/app/orders/archive', label: "Archive", icon: 'archive' },
+  { id: 'projects', to: '/app/orders/projects', label: "Projects", icon: 'fileBox' },
+  { id: 'tasks', to: '/app/orders/tasks', label: "Tasks", icon: 'listTodo' },
+];
 
 function Orders({ className = appearance }) {
   const a = merge(appearance, className);
@@ -9,9 +18,9 @@ function Orders({ className = appearance }) {
   return (
     <div className={a.container}>
       <div className={a.hed}>
-        <h2 className={a.section}>Orders</h2>
+        <Title to='/app/orders' className={a.section}>Orders</Title>
         <Search />
-        <Tabs className={a.tabs} />
+        <Tabs tabs={tabs} className={a.tabs} />
       </div>
       <Outlet />
     </div>

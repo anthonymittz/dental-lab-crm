@@ -3,20 +3,16 @@ import NavLink from "@/components/elements/NavLink.jsx";
 import { is, merge } from "@lib/merge";
 import { useMatch } from "react-router";
 
-/** @type { TabMeta[] } */
-const tabs = [
-  { id: 'current', to: '/app/orders/current', label: "Current", icon: 'stickyNote' },
-  { id: 'archive', to: '/app/orders/archive', label: "Archive", icon: 'archive' },
-  { id: 'projects', to: '/app/orders/projects', label: "Projects", icon: 'fileBox' },
-  { id: 'tasks', to: '/app/orders/tasks', label: "Tasks", icon: 'listTodo' },
-];
-
 /**
  * @param {{ 
+ *   tabs: TabMeta[]
  *   className?: typeof listAppearance
  * }} props
  */
-function Tabs({ className = listAppearance }) {
+function Tabs({
+  tabs,
+  className = listAppearance
+}) {
   const list = tabs.map(t =>
     <Tab data={t} key={t.id} />)
 
