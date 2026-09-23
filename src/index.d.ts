@@ -1,4 +1,5 @@
 // import { IpcAPI } from "@/ipc.js";
+import * as React from 'react';
 
 export { };
 
@@ -38,8 +39,7 @@ declare global {
   declare module "*.css" { }
 
   declare module "*.svg" {
-    import * as React from 'react';
-    const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
+    const ReactComponent: React.FunctionComponent<React.SVGAttributes<SVGSVGElement> & { title?: string }>;
     export default ReactComponent;
   }
 

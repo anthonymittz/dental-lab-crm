@@ -37,6 +37,7 @@
     "@electron/rebuild": "^4.2.0",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/react": "^19.3.0",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^10.1.1",
     "cross-env": "^10.1.0",
