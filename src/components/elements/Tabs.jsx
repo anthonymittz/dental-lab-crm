@@ -1,6 +1,7 @@
 import Icon from "@/components/elements/Icon.jsx";
 import NavLink from "@/components/elements/NavLink.jsx";
-import { merge } from "@lib/merge";
+import { is, merge } from "@lib/merge";
+import { useMatch } from "react-router";
 
 /** @type { TabMeta[] } */
 const tabs = [
@@ -12,16 +13,14 @@ const tabs = [
 
 /**
  * @param {{ 
- *   className?: Partial<typeof listAppearance>
+ *   className?: typeof listAppearance
  * }} props
  */
 function Tabs({ className = listAppearance }) {
-  const a = merge(listAppearance, className);
-
   const list = tabs.map(t =>
     <Tab data={t} key={t.id} />)
 
-  return <div className={a.container}>{ list }</div>;
+  return <div className={is(listAppearance, className)}>{ list }</div>;
 }
 
 /**
@@ -29,20 +28,22 @@ function Tabs({ className = listAppearance }) {
  */
 function Tab({ data }) {
   const a = merge(tabAppearance);
+  const isCurrent = useMatch(data.to);
   return (
-    <NavLink to={data.to} className={a.container}>
-      <p className={a.label}>{data.label}</p>
+    <NavLink to={data.to} className={is(a.container, '')}>
+      <p className={is(a.label, isCurrent ? 'text-test-900' : 'text-test-600')}>{data.label}</p>
+      { isCurrent && <div className={a.highlight} /> }
     </NavLink>
   );
 }
 
-const listAppearance = {
-  container: "flex gap-1"
-};
+/** @type {string} */
+const listAppearance = "flex gap-1";
 
 const tabAppearance = {
-  container: "flex items-center",
-  label: ''
+  container: "group flex items-center px-2 relative border-x-3 border-t-3 border-test-100 mt-2 rounded-t-md",
+  label: "font-semibold",
+  highlight: "absolute h-1 top-full left-0 right-0 bg-test-200"
 };
 
 export default Tabs;

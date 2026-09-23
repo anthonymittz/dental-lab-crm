@@ -11,7 +11,7 @@ function Orders({ className = appearance }) {
       <div className={a.hed}>
         <h2 className={a.section}>Orders</h2>
         <Search />
-        <Tabs />
+        <Tabs className={a.tabs} />
       </div>
       <Outlet />
     </div>
@@ -20,8 +20,9 @@ function Orders({ className = appearance }) {
 
 const appearance = {
   container: "grid grid-rows-[max-content_1fr] gap-1 *:bg-test-200",
-  hed: "px-4 py-2 flex gap-4 items-center",
+  hed: "flex gap-4 items-center px-4",
   section: "select-none uppercase text-sm font-semibold tracking-wide",
+  tabs: "h-12 ml-auto",
   content: "px-4 py-2"
 };
 
