@@ -30,8 +30,15 @@ declare global {
     icon?: IconName;
   }
 
+  type AtLeastOne<T, Keys extends keyof T = keyof T> =
+    Partial<T> & { [K in Keys]: Required<Pick<T, K>> }[Keys];
+
+  interface GridItem { id: string, element: import("react").ReactNode }
+  
+  type GridSize = AtLeastOne<{ rows: number, cols: number }>
+
   type ExtractClassName<T extends React.ComponentType<any>> =
-    Partial<React.ComponentProps<T>>['className']
+    Partial<React.ComponentProps<T>>['className'];
 
   declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
   declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
