@@ -1,4 +1,5 @@
-import { merge } from "@lib/merge";
+import HorizontalPaneLayout from "@/components/layouts/HorizontalPaneLayout.jsx";
+import { is, merge } from "@lib/merge";
 
 /**
  * @param {{ 
@@ -9,14 +10,16 @@ function SettingsEditor({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
-      Settings Editor
-    </div>
+    <HorizontalPaneLayout columns={['max-content', '1fr']} className={a.container}>
+      <div className={is(a.pane, "w-64")}>Foo</div>
+      <div className={a.pane}>Foo</div>
+    </HorizontalPaneLayout>
   );
 }
 
 const appearance = {
-  container: "centered"
+  container: "bg-transparent! *:bg-test-200",
+  pane: "px-4 py-3"
 };
 
 export default SettingsEditor;
