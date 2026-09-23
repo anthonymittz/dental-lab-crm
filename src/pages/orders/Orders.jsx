@@ -1,9 +1,5 @@
 import Search from "@/components/elements/Search.jsx";
-import Tabs from "@/components/elements/Tabs.jsx";
-import Title from "@/components/elements/Title.jsx";
 import TabLayout from "@/components/layouts/TabLayout.jsx";
-import { merge } from "@lib/merge";
-import { Outlet } from "react-router";
 
 /** @type { TabMeta[] } */
 const tabs = [
