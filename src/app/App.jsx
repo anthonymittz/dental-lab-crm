@@ -43,12 +43,14 @@ import OverviewInventory from "@/pages/inventory/OverviewInventory.jsx";
 import Materials from "@/pages/inventory/Materials.jsx";
 import Tools from "@/pages/inventory/Tools.jsx";
 import Expendables from "@/pages/inventory/Expendables.jsx";
+import SettingsEditor from "@/pages/settings/SettingsEditor.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Welcome />} />
       <Route path='/app' element={<AppLayout menu={<MenuPanel />} />}>
+        <Route path='welcome' element={<Welcome />} />
         <Route path='agenda' element={<Agenda />}>
           <Route index element={<OverviewAgenda />} />
           <Route path='calendar' element={<Calendar />} />
@@ -68,7 +70,6 @@ function App() {
           <Route path='planned' element={<PlannedDeliveries />} />
           <Route path='archived' element={<ArchivedDeliveries />} />
         </Route>
-        <Route path='fallback' element={<Fallback />} />
         <Route path='statistics' element={<Statistics />}>
           <Route index element={<OverviewStatistics />} />
           <Route path='lab' element={<LabStatistics />} />
@@ -87,8 +88,10 @@ function App() {
           <Route path='projects' element={<Projects />} />
           <Route path='tasks' element={<Tasks />} />
         </Route>
-        <Route path='settings' element={<Settings />} />
-        <Route path='welcome' element={<Welcome />} />
+        <Route path='settings' element={<Settings />}>
+          <Route index element={<SettingsEditor />} />
+        </Route>
+        <Route path='fallback' element={<Fallback />} />
       </Route>
     </Routes>
   );
