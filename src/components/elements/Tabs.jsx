@@ -26,7 +26,7 @@ function Tab({ data }) {
   const a = merge(tabAppearance);
   const isCurrent = useMatch(data.to);
   return (
-    <NavLink to={data.to} className={is(a.container, isCurrent ? 'text-test-900' : 'text-test-500')}>
+    <NavLink to={data.to} className={{ container: is(a.container, isCurrent ? 'text-test-900' : 'text-test-500') }}>
       { data.icon && <Icon type={data.icon} size={18} strokeWidth={2} /> }
       <p className={a.label}>{data.label}</p>
       { isCurrent && <div className={a.highlight} /> }

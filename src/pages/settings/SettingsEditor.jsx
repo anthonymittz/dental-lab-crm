@@ -1,25 +1,27 @@
-import HorizontalPaneLayout from "@/components/layouts/HorizontalPaneLayout.jsx";
-import { is, merge } from "@lib/merge";
+import { merge } from "@lib/merge";
 
 /**
  * @param {{ 
+ *   title?: string
  *   className?: Partial<typeof appearance>
  * }} props
  */
-function SettingsEditor({ className = appearance }) {
+function SettingsEditor({
+  className = appearance,
+  title = "Settings"
+}) {
   const a = merge(appearance, className);
 
   return (
-    <HorizontalPaneLayout columns={['max-content', '1fr']} className={a.container}>
-      <div className={is(a.pane, "w-64")}>Foo</div>
-      <div className={a.pane}>Foo</div>
-    </HorizontalPaneLayout>
+    <div className={a.container}>
+      <h3 className={a.title}>{ title }</h3>
+    </div>
   );
 }
 
 const appearance = {
-  container: "bg-transparent! *:bg-test-200",
-  pane: "px-4 py-3"
+  container: "centered",
+  title: "font-bold text-lg",
 };
 
 export default SettingsEditor;

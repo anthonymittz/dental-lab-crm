@@ -34,6 +34,8 @@ const iconMap = {
   flaskConical: Icons.FlaskConical,
   hospital: Icons.Hospital,
   trendingUp: Icons.TrendingUp,
+  fileDown: Icons.FileDown,
+  fileUp: Icons.FileUp,
 };
 
 /**

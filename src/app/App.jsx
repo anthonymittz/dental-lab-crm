@@ -43,6 +43,7 @@ import OverviewInventory from "@/pages/inventory/OverviewInventory.jsx";
 import Materials from "@/pages/inventory/Materials.jsx";
 import Tools from "@/pages/inventory/Tools.jsx";
 import Expendables from "@/pages/inventory/Expendables.jsx";
+import OverviewSettings from "@/pages/settings/OverviewSettings.jsx";
 import SettingsEditor from "@/pages/settings/SettingsEditor.jsx";
 
 function App() {
@@ -88,10 +89,13 @@ function App() {
           <Route path='projects' element={<Projects />} />
           <Route path='tasks' element={<Tasks />} />
         </Route>
-        <Route path='settings' element={<Settings />}>
-          <Route index element={<SettingsEditor />} />
+        <Route path='settings' element={<Settings><OverviewSettings /></Settings>}>
+          <Route path='general' element={<SettingsEditor title="General" />} />
+          <Route path='storage' element={<SettingsEditor title="Storage" />} />
+          <Route path='appearance' element={<SettingsEditor title="Appearance" />} />
+          <Route path='extensions' element={<SettingsEditor title="Extensions" />} />
         </Route>
-        <Route path='fallback' element={<Fallback />} />
+        <Route path='*' element={<Fallback />} />
       </Route>
     </Routes>
   );

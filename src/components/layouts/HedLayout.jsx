@@ -9,10 +9,11 @@ import { Outlet } from "react-router";
  *   to?: string
  *   hed?: import("react").ReactNode
  *   className?: Partial<typeof appearance>
+ *   children?: import("react").ReactNode
  * }} props
  */
 function HedLayout({
-  title, to, hed,
+  title, to, hed, children = null,
   className = appearance
 }) {
   const a = merge(appearance, className);
@@ -23,7 +24,7 @@ function HedLayout({
         <Title to={to} className={a.section}>{ title }</Title>
         { hed }
       </div>
-      <Outlet />
+      { children || <Outlet /> }
     </div>
   );
 }

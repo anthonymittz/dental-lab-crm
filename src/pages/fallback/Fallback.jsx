@@ -1,3 +1,4 @@
+import NavLink from "@/components/elements/NavLink.jsx";
 import { merge } from "@lib/merge";
 
 function Fallback({ className = appearance }) {
@@ -5,7 +6,8 @@ function Fallback({ className = appearance }) {
 
   return (
     <div className={a.container}>
-      Fallback
+      <h1>Not found</h1>
+      <NavLink to='/'>Go back to the beginning...</NavLink>
     </div>
   );
 }
