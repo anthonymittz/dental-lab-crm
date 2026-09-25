@@ -1,6 +1,6 @@
 import List from "@/components/elements/List.jsx";
 import NavLink from "@/components/elements/NavLink.jsx";
-import HorizontalPaneLayout from "@/components/layouts/HorizontalPaneLayout.jsx";
+import PaneLayout from "@/components/layouts/PaneLayout.jsx";
 import SettingsEditor from "@/pages/settings/SettingsEditor.jsx";
 import { is, merge } from "@lib/merge";
 import { Outlet } from "react-router";
@@ -24,10 +24,10 @@ function OverviewSettings({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <HorizontalPaneLayout columns={['max-content', '1fr']} className={a.container}>
+    <PaneLayout columns={['max-content', '1fr']} className={a.container}>
       <List items={items} className={{ container: is(a.pane, 'w-64') }} />
       <Outlet />
-    </HorizontalPaneLayout>
+    </PaneLayout>
   );
 }
 
