@@ -42,7 +42,7 @@ const appearance = {
     pl-2 flex gap-2 items-center
   bg-c-100 text-c-600 
   focus-within:bg-c-50 focus-within:text-c-950`,
-  input: "p-0 py-1 focus:outline-none",
+  input: "p-0 py-1 focus:outline-none focus-visible:ring-0",
   button: "px-2 py-1"
 };
 

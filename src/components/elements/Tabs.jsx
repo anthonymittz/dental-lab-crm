@@ -38,7 +38,7 @@ function Tab({ data }) {
 const listAppearance = "flex gap-1";
 
 const tabAppearance = {
-  container: "group flex gap-2 items-center px-3 relative border-x-3 border-t-3 border-c-100 mt-2 rounded-t-md",
+  container: "group flex! gap-2 items-center px-3 relative border-x-3 border-t-3 border-c-100 mt-2 rounded-t-md",
   label: "font-semibold",
   highlight: "absolute h-1 top-full left-0 right-0 bg-c-200"
 };

@@ -35,8 +35,8 @@ const listAppearance = {
 };
 
 const linkAppearance = {
-  container: "group relative p-1.5 flex justify-center items-center rounded-sm text-c-600 hover:bg-c-400 hover:text-c-900 has-[:focus-visible]:bg-c-400 aspect-square shring-0",
-  link: "focus-visible:outline-none focus-visible:ring-0",
+  container: "group relative flex justify-center items-center rounded-sm text-c-600 hover:bg-c-400 hover:text-c-900 has-[:focus-visible]:bg-c-400 aspect-square shring-0",
+  link: "p-1.5 focus-visible:outline-none focus-visible:ring-0",
   tooltip: `
     absolute left-full top-1/2 ml-4 -translate-y-1/2 
     pointer-events-none whitespace-nowrap rounded-sm

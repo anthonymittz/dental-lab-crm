@@ -1,4 +1,4 @@
-import { merge } from "@lib/merge";
+import { is, merge } from "@lib/merge";
 import { a } from "motion/react-client";
 import { useCallback, useMemo, useState } from "react";
 
@@ -17,10 +17,10 @@ function Table({
   
   return (
     <div className={a.container}>
-      <div className="grid" style={{ gridTemplateColumns: layout }}>
+      <div className="grid gap-1 mr-2" style={{ gridTemplateColumns: layout }}>
         { dataToHeadElements(initial.columns, requestSort) }
       </div>
-      <div className="grow flex flex-col h-full overflow-y-auto">
+      <div className="grow flex flex-col h-full gap-1 overflow-y-auto">
         { dataToRows(data, layout) }
       </div>
     </div>
@@ -54,7 +54,7 @@ function Column({
   className,
   children
 }) {
-  return <div className={className} onClick={onClick}>{ children }</div>;
+  return <div className={is(className, 'bg-c-200 px-4 py-1')} onClick={onClick}>{ children }</div>;
 }
 
 function Row({
@@ -62,8 +62,8 @@ function Row({
   style,
   className
 }) {
-  const cellElements = cells.map((c, i) => <div key={i}>{ c }</div>)
-  return <div className={className} style={style}>{ cellElements }</div>;
+  const cellElements = cells.map((c, i) => <div key={i} className={is('bg-c-200 px-4 py-1')}>{ c }</div>)
+  return <div className={is(className, 'gap-1')} style={style}>{ cellElements }</div>;
 }
 
 /** @param {TablePayload} initial  */
