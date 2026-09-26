@@ -39,7 +39,7 @@ function PaneLayout({
   template,
   children = null
 }) {  
-  const a = is(`h-full grid gap-1 ${flow ? 'grid-flow-row' : 'grid-flow-col'}`, className);
+  const a = is(appearance, flow ? 'grid-flow-row' : 'grid-flow-col', className);
   return <div className={a} style={getLayout(template, flow)}>{ children }</div>;
 }
 
@@ -52,6 +52,6 @@ function getLayout(template, flow) {
 }
 
 /** @type {string} */
-const appearance = "";
+const appearance = "h-full grid gap-1 overflow-hidden";
 
 export default PaneLayout;

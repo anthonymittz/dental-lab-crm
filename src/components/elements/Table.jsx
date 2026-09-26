@@ -20,7 +20,7 @@ function Table({
       <div className="grid" style={{ gridTemplateColumns: layout }}>
         { dataToHeadElements(initial.columns, requestSort) }
       </div>
-      <div className="grow flex flex-col">
+      <div className="grow flex flex-col h-full overflow-y-auto">
         { dataToRows(data, layout) }
       </div>
     </div>

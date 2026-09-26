@@ -19,7 +19,7 @@ function TabLayout({
   const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
+    <div data-role="tab-layout" className={a.container}>
       <div className={a.hed}>
         <Title to={to} className={a.section}>{ title }</Title>
         { hed }
@@ -31,7 +31,7 @@ function TabLayout({
 }
 
 const appearance = {
-  container: "grid grid-rows-[max-content_1fr] gap-1", // "*:bg-c-200"
+  container: "grid grid-rows-[max-content_1fr] gap-1 overflow-hidden", // "*:bg-c-200"
   hed: "flex gap-4 items-center px-4 bg-c-200",
   section: "select-none uppercase text-sm font-semibold tracking-wide",
   tabs: "h-12 ml-auto",

@@ -22,7 +22,7 @@ function AppLayout({
 }
 
 const appearance = {
-  container: "h-screen grid gap-1 p-1 grid-cols-[max-content_1fr] bg-c-100 text-c-800 tracking-wide"
+  container: "h-screen *:h-screen grid gap-1 p-1 grid-cols-[max-content_1fr] bg-c-100 text-c-800 tracking-wide"
 };
 
 export default AppLayout;

@@ -18,8 +18,98 @@
     "ascending": true
   },
   "data": [
-    ["1", "Tape", 2, "Shelf A"],
-    ["2", "Glue", 1, "Shelf B"],
-    ["3", "Drilling bit", 4, "Shelf C"]
+    ["10", "lorem",        2, "Shelf A"],
+    ["11", "ipsum",        1, "Shelf B"],
+    ["12", "dolor",        4, "Shelf C"],
+    ["13", "sit",          0, "Out of stock"],
+    ["14", "amet",         0, "Out of stock"],
+    ["15", "consectetur",  0, "Out of stock"],
+    ["16", "adipisicing",  0, "Out of stock"],
+    ["17", "elit",         0, "Out of stock"],
+    ["18", "repellendus",  0, "Out of stock"],
+    ["19", "distinctio",   0, "Out of stock"],
+    ["20", "pariatur",     0, "Out of stock"],
+    ["21", "nobis",        0, "Out of stock"],
+    ["22", "possimus",     0, "Out of stock"],
+    ["23", "debitis",      0, "Out of stock"],
+    ["24", "delectus",     0, "Out of stock"],
+    ["25", "eum",          0, "Out of stock"],
+    ["26", "consequuntur", 0, "Out of stock"],
+    ["27", "quas",         0, "Out of stock"],
+    ["28", "harum",        0, "Out of stock"],
+    ["29", "eligendi",     0, "Out of stock"],
+    ["30", "alias",        0, "Out of stock"],
+    ["31", "quae",         0, "Out of stock"],
+    ["32", "mollitia",     0, "Out of stock"],
+    ["33", "ratione",      0, "Out of stock"],
+    ["34", "in",           0, "Out of stock"],
+    ["35", "veniam",       0, "Out of stock"],
+    ["36", "voluptas",     0, "Out of stock"],
+    ["37", "numquam",      0, "Out of stock"],
+    ["38", "iure",         0, "Out of stock"],
+    ["39", "iusto",        0, "Out of stock"],
+    ["40", "blanditiis",   0, "Out of stock"],
+    ["41", "facilis",      0, "Out of stock"],
+    ["42", "assumenda",    0, "Out of stock"],
+    ["43", "accusantium",  0, "Out of stock"],
+    ["44", "aut",          0, "Out of stock"],
+    ["45", "odit",         0, "Out of stock"],
+    ["46", "id",           0, "Out of stock"],
+    ["47", "consequatur",  0, "Out of stock"],
+    ["48", "repellendus",  0, "Out of stock"],
+    ["49", "suscipit",     0, "Out of stock"],
+    ["50", "molestiae",    0, "Out of stock"],
+    ["51", "eius",         0, "Out of stock"],
+    ["52", "tenetur",      0, "Out of stock"],
+    ["53", "nobis",        0, "Out of stock"],
+    ["54", "earum",        0, "Out of stock"],
+    ["55", "voluptas",     0, "Out of stock"]
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
