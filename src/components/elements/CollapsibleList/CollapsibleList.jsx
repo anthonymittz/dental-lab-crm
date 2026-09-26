@@ -1,5 +1,7 @@
-import { getElements } from "@/components/elements/CollapsibleList/CollapsibleElement.jsx";
 import { merge } from "@lib/merge";
+import CollapsibleElement from "@/components/elements/CollapsibleList/CollapsibleElement.jsx";
+import NestedElement from "@/components/elements/CollapsibleList/NestedElement.jsx";
+import StandaloneElement from "@/components/elements/CollapsibleList/StandaloneElement.jsx";
 
 /** Collapsible list
  * @param {{
@@ -19,6 +21,15 @@ function CollapsibleList({
       { getElements(items) }
     </div>
   );
+}
+
+/** @param {CollapsibleItems} items */
+function getElements(items) {
+  return items.map(i => i.sublist
+    ? <CollapsibleElement key={i.id} hed={i.element} collapsed>{
+        i.sublist.map(s => <NestedElement key={s.id}>{ s.element }</NestedElement>)
+      }</CollapsibleElement>
+    : <StandaloneElement key={i.id}>{i.element}</StandaloneElement>);
 }
 
 const appearance = {

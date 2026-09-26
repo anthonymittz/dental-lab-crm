@@ -1,4 +1,5 @@
 import Button from "@/components/elements/Button.jsx";
+import Element from "@/components/elements/CollapsibleList/Element.jsx";
 import Icon from "@/components/elements/Icon.jsx";
 import { is, merge } from "@lib/merge";
 import { useState } from "react";
@@ -7,50 +8,63 @@ import { useState } from "react";
  * @param {{
  *   className?: Partial<typeof appearance>
  *   sublist?: CollapsibleItems
- *   initiallyCollapsed?: boolean
+ *   collapsed?: boolean
+ *   hed?: import("react").ReactNode
  *   children?: import("react").ReactNode
  * }} props 
  */
 function CollapsibleElement({
   className = appearance,
-  sublist,
-  initiallyCollapsed = false,
+  hed,
+  collapsed = false,
   children
 }) {
-  const [isCollapsed, setCollapsed] = useState(initiallyCollapsed);
-  const a = merge(appearance, className, { icon: isCollapsed ? 'rotate-180' : 'rotate-0' });
-
-  const before = sublist
-    ? <Icon type="chevronDown" size={18} className={a.icon} />
-    : <div className="w-[18px]" />;
-
-  const nested = sublist && getElements(sublist);
+  const [isCollapsed, setCollapsed] = useState(collapsed);
+  const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
-      <Button
-        type="flat"
-        size="sm"
-        onClick={() => setCollapsed(p => !p)}
-        className={{ container: a.button }}
-      >
-        {before}
-        {children}
-      </Button>
-      {nested}
-    </div>
+    <>
+      <Element className={a.element} onClick={() => setCollapsed(p => !p)}>
+        <Arrow isCollapsed={isCollapsed} />
+        { hed }
+      </Element>
+      <Collapsible isCollapsed={isCollapsed} className={a.collapsible}>
+        { children }
+      </Collapsible>
+    </>
   );
 }
 
 const appearance = {
-  container: "flex flex-col items-stretch not-first:mt-2",
-  button: "flex gap-1 items-center",
-  icon: "transition-transform duration-300"
+  element: "",
+  collapsible: ""
 };
 
-export function getElements(/** @type {CollapsibleItems} */items) {
-  return items.map(i =>
-    <CollapsibleElement key={i.id} sublist={i.sublist}>{i.element}</CollapsibleElement>);
+// --------------------------------------------------------------- Utility -----
+
+function Collapsible({ isCollapsed, children, className }) {
+  const wrapper = is(
+    "grid transition-all duration-200 ease-in-out ml-[22px]",
+    isCollapsed ? 'grid-rows-[0fr]' : "grid-rows-[1fr]",
+    className
+  );
+  
+  return (
+    <div className={wrapper}>
+    <div className="flex flex-col items-stretch overflow-hidden">
+      { children }
+    </div>
+    </div>
+  );
+}
+
+function Arrow({ isCollapsed }) {
+  const style = is(
+    "transition-transform duration-200",
+    isCollapsed ? 'rotate-0' : 'rotate-180'
+  );
+
+  return <Icon type="chevronDown" size={18} className={style} />;
 }
 
 export default CollapsibleElement;
