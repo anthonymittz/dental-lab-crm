@@ -34,7 +34,7 @@ const appearance = disabled => ({
   outline: disabled 
     ? "border border-test-300 text-test-300" 
     : "text-test-900 border border-test-300 hover:border-test-400 hover:bg-test-300",
-  flat: "bg-transparent",
+  flat: "bg-transparent transition-colors duration-100 hover:bg-test-400/20 active:bg-test-400/40",
   fit: "h-fit! w-fit!",
   sm: "px-2 py-1",
   md: "px-4 py-2",
