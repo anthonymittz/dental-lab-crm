@@ -25,8 +25,8 @@ function Welcome({ className = appearance }) {
 }
 
 const appearance = {
-  container: "h-full bg-test-100 text-test-800 flex flex-col gap-8 justify-center items-center",
-  name: "text-center text-3xl/10 text-test-600 font-light uppercase tracking-widest mb-16",
+  container: "h-full bg-c-100 text-c-800 flex flex-col gap-8 justify-center items-center",
+  name: "text-center text-3xl/10 text-c-600 font-light uppercase tracking-widest mb-16",
   brand: "h-48"
 };
 

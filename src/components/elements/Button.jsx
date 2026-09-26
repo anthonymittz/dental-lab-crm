@@ -27,14 +27,14 @@ const appearance = disabled => ({
   container: is("rounded-sm", disabled || 'cursor-pointer'),
   primary: disabled 
     ? "bg-accent-700 text-accent-600" 
-    : "bg-accent-500 text-test-900",
+    : "bg-accent-500 text-c-900",
   secondary: disabled 
-    ? "bg-test-300 text-test-400" 
-    : "bg-test-300 text-test-900 hover:bg-test-400",
+    ? "bg-c-300 text-c-400" 
+    : "bg-c-300 text-c-900 hover:bg-c-400",
   outline: disabled 
-    ? "border border-test-300 text-test-300" 
-    : "text-test-900 border border-test-300 hover:border-test-400 hover:bg-test-300",
-  flat: "bg-transparent transition-colors duration-100 hover:bg-test-400/20 active:bg-test-400/40",
+    ? "border border-c-300 text-c-300" 
+    : "text-c-900 border border-c-300 hover:border-c-400 hover:bg-c-300",
+  flat: "bg-transparent transition-colors duration-100 hover:bg-c-400/20 active:bg-c-400/40",
   fit: "h-fit! w-fit!",
   sm: "px-2 py-1",
   md: "px-4 py-2",

@@ -15,7 +15,7 @@ function Materials({ className = appearance }) {
 
   return (
     <PaneLayout flow="column" template="16rem 1fr">
-      <CollapsibleList items={dataToItems(data)} className={{ container: 'p-2 bg-test-200'}} />
+      <CollapsibleList items={dataToItems(data)} className={{ container: 'p-2 bg-c-200'}} />
       <Table />
     </PaneLayout>
   );

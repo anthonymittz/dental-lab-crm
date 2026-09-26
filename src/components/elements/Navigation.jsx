@@ -19,7 +19,7 @@ function Link({ data }) {
 
   return (
     <div className={a.container}>
-      <NavLink to={data.to} className={({ isActive }) => is(a.link, isActive && 'bg-test-400 text-test-900')}>
+      <NavLink to={data.to} className={({ isActive }) => is(a.link, isActive && 'bg-c-400 text-c-900')}>
         <Icon strokeWidth={1.5} type={data.icon} />
       </NavLink>
       <div className={a.tooltip}>{data.label}</div>
@@ -32,13 +32,13 @@ const listAppearance = {
 };
 
 const linkAppearance = {
-  container: "group relative p-1.5 rounded-sm text-test-600 hover:bg-test-400 hover:text-test-900",
+  container: "group relative p-1.5 rounded-sm text-c-600 hover:bg-c-400 hover:text-c-900",
   link: "",
   active: "bg",
   tooltip: `
     absolute left-full top-1/2 ml-4 -translate-y-1/2 
     pointer-events-none whitespace-nowrap rounded-sm
-    bg-test-300 px-2.5 py-1.5
+    bg-c-300 px-2.5 py-1.5
     opacity-0 transition-opacity duration-200 group-hover:opacity-100`
 };
 

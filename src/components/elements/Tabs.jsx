@@ -26,7 +26,7 @@ function Tab({ data }) {
   const a = merge(tabAppearance);
   const isCurrent = useMatch(data.to);
   return (
-    <NavLink to={data.to} className={{ container: is(a.container, isCurrent ? 'text-test-900' : 'text-test-500') }}>
+    <NavLink to={data.to} className={{ container: is(a.container, isCurrent ? 'text-c-900' : 'text-c-500') }}>
       { data.icon && <Icon type={data.icon} size={18} strokeWidth={2} /> }
       <p className={a.label}>{data.label}</p>
       { isCurrent && <div className={a.highlight} /> }
@@ -38,9 +38,9 @@ function Tab({ data }) {
 const listAppearance = "flex gap-1";
 
 const tabAppearance = {
-  container: "group flex gap-2 items-center px-3 relative border-x-3 border-t-3 border-test-100 mt-2 rounded-t-md",
+  container: "group flex gap-2 items-center px-3 relative border-x-3 border-t-3 border-c-100 mt-2 rounded-t-md",
   label: "font-semibold",
-  highlight: "absolute h-1 top-full left-0 right-0 bg-test-200"
+  highlight: "absolute h-1 top-full left-0 right-0 bg-c-200"
 };
 
 export default Tabs;

@@ -36,7 +36,7 @@ function MenuPanel({ className = appearance }) {
 }
 
 const appearance = {
-  container: "p-2 flex flex-col gap-1 justify-between items-center bg-test-200"
+  container: "p-2 flex flex-col gap-1 justify-between items-center bg-c-200"
 };
 
 export default MenuPanel;

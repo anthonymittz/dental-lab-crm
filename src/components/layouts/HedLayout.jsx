@@ -30,7 +30,7 @@ function HedLayout({
 }
 
 const appearance = {
-  container: "grid grid-rows-[max-content_1fr] gap-1 *:bg-test-200",
+  container: "grid grid-rows-[max-content_1fr] gap-1 *:bg-c-200",
   hed: "flex gap-4 items-center px-4 h-12 [&>*:nth-child(2)]:grow",
   section: "select-none uppercase text-sm font-semibold tracking-wide",
   content: "px-4 py-2"

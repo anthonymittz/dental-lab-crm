@@ -24,7 +24,7 @@ function Projects({ className = appearance }) {
 
 function Project({ data = { doctor: 'Иванов', patient: 'Петров' } }) {
   return (
-    <div className="bg-test-300 h-full flex flex-col justify-end p-2">
+    <div className="bg-c-300 h-full flex flex-col justify-end p-2">
       <p className="text-sm">{ data.doctor }</p>
       <p className="text-lg font-semibold">{ data.patient }</p>
     </div>

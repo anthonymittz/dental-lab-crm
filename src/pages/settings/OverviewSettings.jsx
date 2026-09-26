@@ -32,7 +32,7 @@ function OverviewSettings({ className = appearance }) {
 }
 
 const appearance = {
-  container: "bg-transparent! *:bg-test-200",
+  container: "bg-transparent! *:bg-c-200",
   pane: "px-4 py-3"
 };
 

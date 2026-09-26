@@ -10,10 +10,10 @@ function Table({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <table className={a.container}>
+    <div className={a.container}>
       <div className="flex">Header</div>
       <div className="flex">Table</div>
-    </table>
+    </div>
   );
 }
 

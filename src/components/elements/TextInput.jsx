@@ -40,8 +40,8 @@ function TextInput({
 const appearance = {
   container: `
     pl-2 flex gap-2 items-center
-  bg-test-100 text-test-600 
-  focus-within:bg-test-50 focus-within:text-test-950`,
+  bg-c-100 text-c-600 
+  focus-within:bg-c-50 focus-within:text-c-950`,
   input: "p-0 py-1 focus:outline-none",
   button: "px-2 py-1"
 };
