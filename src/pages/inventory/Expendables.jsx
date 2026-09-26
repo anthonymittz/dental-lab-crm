@@ -1,4 +1,4 @@
-import { inventoryExpendables } from "@/descriptions.js";
+import { inventoryExpendables } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

@@ -1,4 +1,4 @@
-import { businessWorkflows } from "@/descriptions.js";
+import { businessWorkflows } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

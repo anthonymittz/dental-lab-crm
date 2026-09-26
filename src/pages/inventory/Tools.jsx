@@ -1,4 +1,4 @@
-import { inventoryTools } from "@/descriptions.js";
+import { inventoryTools } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

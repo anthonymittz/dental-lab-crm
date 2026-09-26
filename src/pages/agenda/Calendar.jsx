@@ -1,4 +1,4 @@
-import { agendaCalendar } from "@/descriptions.js";
+import { agendaCalendar } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

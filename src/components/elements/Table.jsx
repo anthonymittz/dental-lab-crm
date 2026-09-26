@@ -11,8 +11,8 @@ function Table({ className = appearance }) {
 
   return (
     <table className={a.container}>
-      <thead><tr className="flex"><th>Header</th></tr></thead>
-      <tbody><tr className="flex"><td>Table</td></tr></tbody>
+      <div className="flex">Header</div>
+      <div className="flex">Table</div>
     </table>
   );
 }

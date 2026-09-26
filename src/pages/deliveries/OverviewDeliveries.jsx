@@ -1,4 +1,4 @@
-import { deliveriesOverview } from "@/descriptions.js";
+import { deliveriesOverview } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

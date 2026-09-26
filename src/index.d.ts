@@ -32,12 +32,15 @@ declare global {
 
   interface CollapsibleItem { 
     id: string, 
+    element: string, 
+    sublist?: CollapsibleItem[]
+  }
+
+  interface CollapsibleElement extends CollapsibleItem { 
     element: import("react").ReactNode, 
-    sublist?: CollapsibleItems 
+    sublist?: CollapsibleElement[]
   }
   
-  type CollapsibleItems = Array<CollapsibleItem>
-
   type AtLeastOne<T, Keys extends keyof T = keyof T> =
     Partial<T> & { [K in Keys]: Required<Pick<T, K>> }[Keys];
 

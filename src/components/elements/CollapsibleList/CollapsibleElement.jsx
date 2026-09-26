@@ -7,7 +7,7 @@ import { useState } from "react";
 /** List element
  * @param {{
  *   className?: Partial<typeof appearance>
- *   sublist?: CollapsibleItems
+ *   sublist?: CollapsibleElement[]
  *   collapsed?: boolean
  *   hed?: import("react").ReactNode
  *   children?: import("react").ReactNode

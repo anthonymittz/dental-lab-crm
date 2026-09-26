@@ -1,4 +1,4 @@
-import { orderArchived } from "@/descriptions.js";
+import { orderArchived } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

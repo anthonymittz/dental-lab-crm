@@ -1,24 +1,9 @@
-import CollapsibleList from "@/components/elements/CollapsibleList/CollapsibleList.jsx";
+import CollapsibleList, { dataToItems } from "@/components/elements/CollapsibleList/CollapsibleList.jsx";
 import Table from "@/components/elements/Table.jsx";
 import PaneLayout from "@/components/layouts/PaneLayout.jsx";
-import { inventoryMaterials } from "@/descriptions.js";
+import data from "@/content/inventory/materials.json";
 import { merge } from "@lib/merge";
-
-const items = [
-  { 
-    id: '7198',
-    element: 'Гипс',
-    sublist: [
-      { id: '9b9b', element: <>2 класс<br />(антагонисты)</> },
-      { id: '4ed0', element: <>3 класс<br />(цоколи)</> },
-      { id: '847a', element: <>4 класс<br />(разборные модели)</> },
-    ]
-  },
-  { 
-    id: '1b7b', 
-    element: 'Керамика'
-  },
-];
+import { inventoryMaterials } from "@/content/descriptions.js";
 
 /**
  * @param {{ 
@@ -29,8 +14,8 @@ function Materials({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <PaneLayout flow="column" template="12rem 1fr" className="*:bg-test-200 *:p-2">
-      <CollapsibleList items={items} />
+    <PaneLayout flow="column" template="16rem 1fr">
+      <CollapsibleList items={dataToItems(data)} className={{ container: 'p-2 bg-test-200'}} />
       <Table />
     </PaneLayout>
   );

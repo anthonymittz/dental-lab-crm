@@ -5,7 +5,7 @@ import StandaloneElement from "@/components/elements/CollapsibleList/StandaloneE
 
 /** Collapsible list
  * @param {{
- *   items?: CollapsibleItems 
+ *   items?: CollapsibleElement[]
  *   className?: Partial<typeof appearance>
  * }} props
  */
@@ -23,13 +23,25 @@ function CollapsibleList({
   );
 }
 
-/** @param {CollapsibleItems} items */
+/** @param {CollapsibleElement[]} items */
 function getElements(items) {
   return items.map(i => i.sublist
     ? <CollapsibleElement key={i.id} hed={i.element} collapsed>{
         i.sublist.map(s => <NestedElement key={s.id}>{ s.element }</NestedElement>)
       }</CollapsibleElement>
     : <StandaloneElement key={i.id}>{i.element}</StandaloneElement>);
+}
+
+/** Data parser for CollapsibleList consumption.
+ * @param {CollapsibleItem[]} data 
+ * @returns {CollapsibleElement[]}
+ */
+export function dataToItems(data) {
+  return data.map(i => ({
+    id: i.id,
+    element: <div className="whitespace-pre-wrap">{ i.element }</div>,
+    sublist: i.sublist ? dataToItems(i.sublist) : undefined
+  }));
 }
 
 const appearance = {

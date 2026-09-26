@@ -1,4 +1,4 @@
-import { statisticsClinic } from "@/descriptions.js";
+import { statisticsClinic } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**

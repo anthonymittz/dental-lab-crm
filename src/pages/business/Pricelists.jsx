@@ -1,4 +1,4 @@
-import { businessPricelists } from "@/descriptions.js";
+import { businessPricelists } from "@/content/descriptions.js";
 import { merge } from "@lib/merge";
 
 /**
