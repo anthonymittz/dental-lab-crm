@@ -1,0 +1,25 @@
+{
+  "columns": {
+    "ids": ["id", "name", "quantity", "location"],
+    "visible": ["name", "quantity", "location"],
+    "names": {
+      "id": "ID",
+      "name": "Name",
+      "quantity": "Quantity",
+      "location": "Location"
+    },
+    "sizes": {
+      "id": "0fr",
+      "name": "2fr",
+      "quantity": "1fr",
+      "location": "1fr"
+    },
+    "sortBy": "name",
+    "ascending": true
+  },
+  "data": [
+    ["1", "Tape", 2, "Shelf A"],
+    ["2", "Glue", 1, "Shelf B"],
+    ["3", "Drilling bit", 4, "Shelf C"]
+  ]
+}
