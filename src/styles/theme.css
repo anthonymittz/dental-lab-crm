@@ -43,15 +43,43 @@
   --color-accent-900:           #2a130c;
   --color-accent-950:           #210f09;
 
-  --color-test-50:              #000000; /* current input text */
-  --color-test-100:             #101010; /* backdrop */
-  --color-test-200:             #161616; /* panel */
-  --color-test-300:             #1f1f1f; /* item, tooltip bg */ 
-  --color-test-400:             #363636; /* item hover bg, menu (-4%) */
-  --color-test-500:             #525252; /* toggle */
-  --color-test-600:             #808080; /* deselected text, icon */
-  --color-test-700:             #838383; /* text */
-  --color-test-800:             #b1b1b1; /* item text */ 
-  --color-test-900:             #cccccc; /* selected text, icon */
-  --color-test-950:             #ffffff; /* current input bg */
+  --color-test-50:              var(--c-50); /* current input text */
+  --color-test-100:             var(--c-100); /* backdrop */
+  --color-test-200:             var(--c-200); /* panel */
+  --color-test-300:             var(--c-300); /* item, tooltip bg */ 
+  --color-test-400:             var(--c-400); /* item hover bg, menu (-4%) */
+  --color-test-500:             var(--c-500); /* toggle */
+  --color-test-600:             var(--c-600); /* deselected text, icon */
+  --color-test-700:             var(--c-700); /* text */
+  --color-test-800:             var(--c-800); /* item text */ 
+  --color-test-900:             var(--c-900); /* selected text, icon */
+  --color-test-950:             var(--c-950); /* current input bg */
+}
+
+:root {
+  --c-50:  #ffffff;
+  --c-100: #e0e0e0;
+  --c-200: #f0f0f0;
+  --c-300: #fafafa;
+  --c-400: #ffffff;
+  --c-500: #525252;
+  --c-600: #363636;
+  --c-700: #1f1f1f;
+  --c-800: #161616;
+  --c-900: #101010;
+  --c-950: #000000;
+}
+
+body.dark {
+  --c-50:  #000000;
+  --c-100: #101010;
+  --c-200: #161616;
+  --c-300: #1f1f1f;
+  --c-400: #363636;
+  --c-500: #525252;
+  --c-600: #808080;
+  --c-700: #838383;
+  --c-800: #b1b1b1;
+  --c-900: #cccccc;
+  --c-950: #ffffff;
 }
