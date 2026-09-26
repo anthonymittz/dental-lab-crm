@@ -11,7 +11,7 @@ declare global {
   type IconName = 
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
-    "calendarRange" | "kanban" | "calendarClock" | "package" | 
+    "calendarRange" | "kanban" | "calendarClock" | "package" | "chevronDown" |
     "factory" | "tag" | "idCardLanyard" | "circlePile" | "drill" | "recycle" |
     "flaskConical" | "hospital" | "trendingUp" | "fileDown" | "fileUp" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";

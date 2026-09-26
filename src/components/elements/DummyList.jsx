@@ -8,7 +8,7 @@ const items = [
 ];
 
 function MenuItem({ text }) {
-  return <Button type="secondary" size="sm" className={{ container: 'w-full text-left' }}>{text}</Button>
+  return <Button type="flat" size="sm" className={{ container: 'w-full text-left' }}>{text}</Button>
 }
 
 /**

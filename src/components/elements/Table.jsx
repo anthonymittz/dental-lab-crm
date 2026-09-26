@@ -10,14 +10,15 @@ function Table({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
-      Table
-    </div>
+    <table className={a.container}>
+      <thead><tr className="flex"><th>Header</th></tr></thead>
+      <tbody><tr className="flex"><td>Table</td></tr></tbody>
+    </table>
   );
 }
 
 const appearance = {
-  container: "h-full "
+  container: "h-full flex flex-col gap-1"
 };
 
 export default Table;
