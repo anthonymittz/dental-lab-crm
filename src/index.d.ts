@@ -8,6 +8,8 @@ declare global {
     // ipc: IpcAPI
   }
 
+  // Icons
+
   type IconName = 
     "layoutDashboard" | "settings" | "calendarDays" | "notepadText" | "search" | "x" |
     "hammer" | "stickyNote" | "stickyNoteCheck" | "listTodo" | "fileBox" | "archive" |
@@ -16,19 +18,27 @@ declare global {
     "flaskConical" | "hospital" | "trendingUp" | "fileDown" | "fileUp" |
     "truck" | "handshake" | "wallet" | "shelvingUnit" | "login" | "logout";
 
-  interface LinkMeta {
+  // Data for layouts
+
+  interface LinkData {
     id: string;
     to: string;
     label: string;
     icon: IconName;
   }
 
-  interface TabMeta {
+  interface TabData {
     id: string;
     to: string;
     label: string;
     icon?: IconName;
   }
+
+  interface TableData {
+    
+  }
+
+  // Collapsible list
 
   interface CollapsibleItem { 
     id: string, 
@@ -40,6 +50,8 @@ declare global {
     element: import("react").ReactNode, 
     sublist?: CollapsibleElement[]
   }
+
+  // Grid
   
   type AtLeastOne<T, Keys extends keyof T = keyof T> =
     Partial<T> & { [K in Keys]: Required<Pick<T, K>> }[Keys];
@@ -50,6 +62,8 @@ declare global {
 
   type ExtractClassName<T extends React.ComponentType<any>> =
     Partial<React.ComponentProps<T>>['className'];
+
+  // Webpack
 
   declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
   declare const MAIN_WINDOW_WEBPACK_ENTRY: string;

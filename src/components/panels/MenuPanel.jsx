@@ -2,7 +2,7 @@ import Brand from "@/components/elements/Brand.jsx";
 import Navigation from "@/components/elements/Navigation.jsx";
 import { merge } from "@lib/merge";
 
-/** @type {{primary: LinkMeta[], secondary: LinkMeta[]}} */
+/** @type {{primary: LinkData[], secondary: LinkData[]}} */
 const links = {
   primary: [
     { id: 'orders', to: '/app/orders', label: 'Orders', icon: 'notepadText' },

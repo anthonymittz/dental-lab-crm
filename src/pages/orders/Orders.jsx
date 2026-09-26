@@ -1,7 +1,7 @@
 import Search from "@/components/elements/Search.jsx";
 import TabLayout from "@/components/layouts/TabLayout.jsx";
 
-/** @type { TabMeta[] } */
+/** @type { TabData[] } */
 const tabs = [
   { id: 'current', to: '/app/orders/current', label: "Current", icon: 'stickyNote' },
   { id: 'archive', to: '/app/orders/archive', label: "Archive", icon: 'archive' },

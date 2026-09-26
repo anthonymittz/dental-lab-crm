@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 /**
  * @param {{ 
  *   title: string
- *   tabs: TabMeta[]
+ *   tabs: TabData[]
  *   to?: string
  *   hed?: import("react").ReactNode
  *   className?: Partial<typeof appearance>

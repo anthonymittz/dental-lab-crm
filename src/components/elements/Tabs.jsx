@@ -5,7 +5,7 @@ import { useMatch } from "react-router";
 
 /**
  * @param {{ 
- *   tabs: TabMeta[]
+ *   tabs: TabData[]
  *   className?: typeof listAppearance
  * }} props
  */
@@ -20,7 +20,7 @@ function Tabs({
 }
 
 /**
- * @param {{ data: TabMeta }} props 
+ * @param {{ data: TabData }} props 
  */
 function Tab({ data }) {
   const a = merge(tabAppearance);

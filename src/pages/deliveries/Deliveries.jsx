@@ -3,7 +3,7 @@ import TabLayout from "@/components/layouts/TabLayout.jsx";
 import { merge } from "@lib/merge";
 
 
-/** @type { TabMeta[] } */
+/** @type { TabData[] } */
 const tabs = [
   { id: 'current', to: '/app/deliveries/current', label: "Current", icon: 'package' },
   { id: 'planned', to: '/app/deliveries/planned', label: "Planned", icon: 'calendarClock' },

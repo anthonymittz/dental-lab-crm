@@ -2,7 +2,7 @@ import Search from "@/components/elements/Search.jsx";
 import TabLayout from "@/components/layouts/TabLayout.jsx";
 import { merge } from "@lib/merge";
 
-/** @type { TabMeta[] } */
+/** @type { TabData[] } */
 const tabs = [
   { id: 'offerables', to: '/app/business/offerables', label: "Products & Services", icon: 'factory' },
   { id: 'pricelists', to: '/app/business/pricelists', label: "Price Lists", icon: 'tag' },
