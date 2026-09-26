@@ -6,17 +6,17 @@ import { merge } from "@lib/merge";
 
 const items = [
   { 
-    id: '1',
-    element: 'Foo',
+    id: '7198',
+    element: 'Гипс',
     sublist: [
-      { id: '3', element: 'Buz' },
-      { id: '4', element: 'Qux' },
-      { id: '5', element: 'Quux' },
+      { id: '9b9b', element: <>2 класс<br />(антагонисты)</> },
+      { id: '4ed0', element: <>3 класс<br />(цоколи)</> },
+      { id: '847a', element: <>4 класс<br />(разборные модели)</> },
     ]
   },
   { 
-    id: '2', 
-    element: 'Bar'
+    id: '1b7b', 
+    element: 'Керамика'
   },
 ];
 
