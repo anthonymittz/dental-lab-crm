@@ -13,6 +13,7 @@ const links = {
     { id: 'inventory', to: '/app/inventory', label: 'Inventory', icon: 'shelvingUnit' },
   ],
   secondary: [
+    { id: 'dev', to: '/dev', label: 'Dev Section', icon: 'flaskConical' },
     { id: 'settings', to: '/app/settings', label: 'Settings', icon: 'settings' },
     { id: 'start', to: '/', label: 'Sign out', icon: 'logout' },
   ]

@@ -45,11 +45,13 @@ import Tools from "@/pages/inventory/Tools.jsx";
 import Expendables from "@/pages/inventory/Expendables.jsx";
 import OverviewSettings from "@/pages/settings/OverviewSettings.jsx";
 import SettingsEditor from "@/pages/settings/SettingsEditor.jsx";
+import DevSection from "@/DevSection.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Welcome />} />
+      <Route path='/dev' element={<DevSection />} />
       <Route path='/app' element={<AppLayout menu={<MenuPanel />} />}>
         <Route path='welcome' element={<Welcome />} />
         <Route path='agenda' element={<Agenda />}>
