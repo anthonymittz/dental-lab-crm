@@ -5,7 +5,7 @@
 @import "./theme.css";
 
 body {
-  @apply h-screen overflow-hidden;
+  @apply h-screen overflow-hidden bg-c-100 text-c-700;
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;

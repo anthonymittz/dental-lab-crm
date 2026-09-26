@@ -28,7 +28,7 @@ function MenuPanel({ className = appearance }) {
   const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
+    <div data-role="app-menu" className={a.container}>
       <Brand />
       <Navigation links={links.primary} />
       <Navigation links={links.secondary} />

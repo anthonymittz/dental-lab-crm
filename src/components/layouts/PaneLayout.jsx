@@ -40,7 +40,7 @@ function PaneLayout({
   children = null
 }) {  
   const a = is(appearance, flow ? 'grid-flow-row' : 'grid-flow-col', className);
-  return <div className={a} style={getLayout(template, flow)}>{ children }</div>;
+  return <div data-role="pane-layout" className={a} style={getLayout(template, flow)}>{ children }</div>;
 }
 
 function getLayout(template, flow) {

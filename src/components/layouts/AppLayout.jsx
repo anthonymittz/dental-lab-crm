@@ -4,25 +4,27 @@ import { Outlet } from "react-router";
 /**
  * @param {{
  *   className?: Partial<typeof appearance>
- *   menu?: import("react").ReactNode 
+ *   menu?: import("react").ReactNode
+ *   children?: import("react").ReactNode
  * }} props
  */
 function AppLayout({
   className = appearance,
-  menu = null
+  menu = null,
+  children = null
 }) {
   const a = merge(appearance, className);
 
   return (
-    <div className={a.container}>
+    <div data-role="app-layout" className={a.container}>
       { menu }
-      <Outlet />
+      { children || <Outlet /> }
     </div>
   );
 }
 
 const appearance = {
-  container: "h-screen *:h-screen grid gap-1 p-1 grid-cols-[max-content_1fr] bg-c-100 text-c-800 tracking-wide"
+  container: "h-screen p-1 grid gap-1 grid-cols-[max-content_1fr] overflow-hidden bg-c-100 text-c-800 tracking-wide"
 };
 
 export default AppLayout;

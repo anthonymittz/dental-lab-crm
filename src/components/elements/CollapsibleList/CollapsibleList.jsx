@@ -45,7 +45,7 @@ export function dataToItems(data) {
 }
 
 const appearance = {
-  container: "h-full flex flex-col items-stretch"
+  container: "flex flex-col items-stretch"
 };
 
 export default CollapsibleList;

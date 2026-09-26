@@ -66,13 +66,6 @@ function Row({
   return <div className={className} style={style}>{ cellElements }</div>;
 }
 
-const appearance = {
-  container: "h-full flex flex-col gap-1 p-2",
-  row: "grid grid-flow-col grid-cols-3 gap-1",
-  cell: "",
-  column: ""
-};
-
 /** @param {TablePayload} initial  */
 function useTableState({columns, data}) {
   const [config, setConfig] = useState({
@@ -107,5 +100,12 @@ function useTableState({columns, data}) {
     requestSort
   };
 }
+
+const appearance = {
+  container: "flex flex-col gap-1 p-2",
+  row: "grid grid-flow-col grid-cols-3 gap-1",
+  cell: "",
+  column: ""
+};
 
 export default Table;
