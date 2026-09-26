@@ -30,6 +30,14 @@ declare global {
     icon?: IconName;
   }
 
+  interface CollapsibleItem { 
+    id: string, 
+    element: import("react").ReactNode, 
+    sublist?: CollapsibleItems 
+  }
+  
+  type CollapsibleItems = Array<CollapsibleItem>
+
   type AtLeastOne<T, Keys extends keyof T = keyof T> =
     Partial<T> & { [K in Keys]: Required<Pick<T, K>> }[Keys];
 

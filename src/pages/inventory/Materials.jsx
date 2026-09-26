@@ -1,4 +1,4 @@
-import CollapsibleList from "@/components/elements/CollapsibleList.jsx";
+import CollapsibleList from "@/components/elements/CollapsibleList/CollapsibleList.jsx";
 import Table from "@/components/elements/Table.jsx";
 import PaneLayout from "@/components/layouts/PaneLayout.jsx";
 import { inventoryMaterials } from "@/descriptions.js";
