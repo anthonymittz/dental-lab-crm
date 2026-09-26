@@ -34,8 +34,19 @@ declare global {
     icon?: IconName;
   }
 
-  interface TableData {
-    
+  // Table
+
+  type TableColumns = {
+    ids: string[]
+    visible: string[]
+    names: {[key: string]: string}
+    sortBy: string
+    ascending: boolean
+  }
+
+  type TablePayload = {
+    columns: TableColumns
+    data: any[][]
   }
 
   // Collapsible list
