@@ -13,15 +13,15 @@ function Table({
   className = appearance
 }) {
   const a = merge(appearance, className);
-  const { data, requestSort } = useTableState(initial);
+  const { data, layout, requestSort } = useTableState(initial);
   
   return (
     <div className={a.container}>
-      <div className="grid grid-flow-col grid-cols-3">
+      <div className="grid" style={{ gridTemplateColumns: layout }}>
         { dataToHeadElements(initial.columns, requestSort) }
       </div>
       <div className="grow flex flex-col">
-        { dataToRows(data) }
+        { dataToRows(data, layout) }
       </div>
     </div>
   );
@@ -43,9 +43,9 @@ function dataToHeadElements(columns, sort) {
   );
 }
 
-function dataToRows(data) {
+function dataToRows(data, gridTemplateColumns) {
   return data.map((cells, i) => {
-    return <Row key={i} cells={cells} className="grid grid-cols-3" />
+    return <Row key={i} cells={cells} className="grid" style={{ gridTemplateColumns }} />
   });
 }
 
@@ -59,10 +59,11 @@ function Column({
 
 function Row({
   cells,
+  style,
   className
 }) {
   const cellElements = cells.map((c, i) => <div key={i}>{ c }</div>)
-  return <div className={className}>{ cellElements }</div>;
+  return <div className={className} style={style}>{ cellElements }</div>;
 }
 
 const appearance = {
@@ -93,11 +94,16 @@ function useTableState({columns, data}) {
     return rows.map(row => row.filter((_, i) => visible[i]));
   }, [config]);
 
+  const layout = useMemo(() => {
+    return columns.visible.map(id => columns.sizes[id]).join(' ');
+  }, [columns.sizes])
+
   const requestSort = useCallback(key =>
     setConfig(p => ({ key, asc: p.key === key ? !p.asc : p.asc })), [config])
 
   return {
-    data: sortedData, 
+    data: sortedData,
+    layout,
     requestSort
   };
 }

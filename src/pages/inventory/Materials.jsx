@@ -16,6 +16,12 @@ const table = {
       quantity: 'Quantity',
       location: 'Location'
     },
+    sizes: {
+      id: '0fr',
+      name: '2fr',
+      quantity: '1fr',
+      location: '1fr'
+    },
     sortBy: "name",
     ascending: true
   },

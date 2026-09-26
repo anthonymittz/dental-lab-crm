@@ -40,6 +40,7 @@ declare global {
     ids: string[]
     visible: string[]
     names: {[key: string]: string}
+    sizes: { [key: string]: string }
     sortBy: string
     ascending: boolean
   }
