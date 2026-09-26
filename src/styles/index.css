@@ -11,6 +11,22 @@ body {
     sans-serif;
 }
 
+a {
+  display: inline-block;
+}
+
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-indigo-500 ring-inset;
+    /* outline: 2px solid gray !important; */
+  }
+
+  *::-webkit-scrollbar { width: 8px; height: 8px }
+  *::-webkit-scrollbar-track { background: var(--c-300); border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb { background: var(--c-500); border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb:hover { background: var(--c-700); }
+}
+
 /* ---------------------------------------------------------------- Select ----- */
 
 select, ::picker(select) {
@@ -36,6 +52,10 @@ option {
 
 .centered {
   @apply h-full flex flex-col gap-2 justify-center items-center whitespace-break-spaces;
+}
+
+.outline-on-tab {
+  @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-500 focus-visible:ring-inset;
 }
 
 /* ------------------------------------------------------------ Components ----- */

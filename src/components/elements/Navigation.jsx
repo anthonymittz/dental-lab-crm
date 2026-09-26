@@ -1,6 +1,8 @@
 import Icon from "@/components/elements/Icon.jsx";
+import NavLink from "@/components/elements/NavLink.jsx";
 import { is, merge } from "@lib/merge";
-import { NavLink } from "react-router";
+import { useMatch } from "react-router";
+// import { NavLink } from "react-router";
 
 function Navigation({
   links,
@@ -16,10 +18,11 @@ function Navigation({
 
 function Link({ data }) {
   const a = merge(linkAppearance);
+  const isActive = useMatch(data.to);
 
   return (
-    <div className={a.container}>
-      <NavLink to={data.to} className={({ isActive }) => is(a.link, isActive && 'bg-c-400 text-c-900')}>
+    <div className={is(a.container, isActive && 'bg-c-400 text-c-900')}>
+      <NavLink to={data.to} className={{container: a.link}}>
         <Icon strokeWidth={1.5} type={data.icon} />
       </NavLink>
       <div className={a.tooltip}>{data.label}</div>
@@ -32,9 +35,8 @@ const listAppearance = {
 };
 
 const linkAppearance = {
-  container: "group relative p-1.5 rounded-sm text-c-600 hover:bg-c-400 hover:text-c-900",
-  link: "",
-  active: "bg",
+  container: "group relative p-1.5 flex justify-center items-center rounded-sm text-c-600 hover:bg-c-400 hover:text-c-900 has-[:focus-visible]:bg-c-400 aspect-square shring-0",
+  link: "focus-visible:outline-none focus-visible:ring-0",
   tooltip: `
     absolute left-full top-1/2 ml-4 -translate-y-1/2 
     pointer-events-none whitespace-nowrap rounded-sm

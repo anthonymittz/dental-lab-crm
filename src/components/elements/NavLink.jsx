@@ -24,11 +24,9 @@ function NavLink({
 }
 
 const appearance = {
-  container: "",
+  container: "rounded-sm",
   active: ""
-}; 
-
-
+};
 
 
 export default NavLink;

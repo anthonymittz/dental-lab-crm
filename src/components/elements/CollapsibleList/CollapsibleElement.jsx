@@ -28,7 +28,7 @@ function CollapsibleElement({
         <Arrow isCollapsed={isCollapsed} />
         { hed }
       </Element>
-      <Collapsible isCollapsed={isCollapsed} className={a.collapsible}>
+      <Collapsible isCollapsed={isCollapsed} inert={isCollapsed} className={a.collapsible}>
         { children }
       </Collapsible>
     </>
@@ -42,7 +42,7 @@ const appearance = {
 
 // --------------------------------------------------------------- Utility -----
 
-function Collapsible({ isCollapsed, children, className }) {
+function Collapsible({ isCollapsed, children, inert, className }) {
   const wrapper = is(
     "grid transition-all duration-200 ease-in-out ml-[22px]",
     isCollapsed ? 'grid-rows-[0fr]' : "grid-rows-[1fr]",
@@ -50,7 +50,7 @@ function Collapsible({ isCollapsed, children, className }) {
   );
   
   return (
-    <div className={wrapper}>
+    <div className={wrapper} inert={inert}>
     <div className="flex flex-col items-stretch overflow-hidden">
       { children }
     </div>
